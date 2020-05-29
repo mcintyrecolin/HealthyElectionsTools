@@ -162,7 +162,7 @@ function graves( lambda, tau, k, Qmax, Brate) {
 			//calculate the number of people outside
 			outside[i] = Math.max(0,numInSys[i]-maxInSystem);
 			//calculate probability Queue length is 0
-			if (numInSys[i]<=k){
+			if (numInSys[i]<k){
 				probQisZero[i] = inSystemProbability[i];
 			} else {
 				probQisZero[i] = 0;
@@ -185,7 +185,7 @@ function graves( lambda, tau, k, Qmax, Brate) {
 		}
 
 		//use littles law to calculate the rest of the results
-		aveW = 60*(expectedQLenIn+expectedQLenOut)/effArrRate;
+		aveW = 60*(expectedQLenIn)/effArrRate;
 		aveSysT = 60*(expectedInSystem)/effArrRate;
 
 		// probability of no wait
