@@ -6,15 +6,18 @@ function makeTable() {
 	$tbody.find("tr").detach(); // clear thte table body of <tr>s
 	for ( index in data ) {
 		var row = data[index];
-		var lambda = row[1];
-		var tau = row[2];
-		var k = row[3];
+		var lambda = row[6];
+		var tau = row[4];
+		var k = row[5];
 		//var X = row[4];
 		//var Y = row[5];
-		var Qmax = row[4];
-		var Brate = row[5];
+		var capacity = row[1];
+		var staff = row[2];
+		var stations = row[3];
+		var joinRate = row[7];
+		var Brate = 1 - joinRate;
 		//results.push( {precinct:row["precinct #"], results:graves(lambda, tau, k, X, Y)} );
-		var res = graves(lambda, tau, parseInt(k), parseInt(Qmax), Brate);
+		var res = graves(lambda, tau, parseInt(k), parseInt(capacity), parseInt(staff), parseInt(stations), Brate);
 		$tbody.append( "<tr><th>" + row[0] + "</th><td>" 
 						+ res.aveW + "</td><td>" 
 						+ res.aveSysT + "</td><td>" 

@@ -1,6 +1,7 @@
-function graves( lambda, tau, k, Qmax, Brate) {
+function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 	
 	// var DataFrame = dfjs.DataFrame
+	var Qmax = capacity-staff-stations;
 
 	// NOTES ON THE UNITS OF INPUTS
 	// lambda : voters per hour
@@ -38,13 +39,22 @@ function graves( lambda, tau, k, Qmax, Brate) {
 		validInputs = false;
 	}
 	*/
-	if (Qmax != "none" && Qmax<0 || Qmax>200)	{
+	if (Qmax<0)	{
+			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range. Ensure total voter stations plus election staff does not exceed building capacity."
+			validInputs = false;
+		} else if (Qmax>200) {
 			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range."
 			validInputs = false;
 		}
 	if (Brate<0 || Brate>1)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Balking rate not within range."
+		alertmessage = alertmessage+"\r"+ "ERROR: Outside Line Entry Chance not within range."
 		validInputs = false;
+	}
+	if (k > stations) {
+		alertmessage = alertmessage + "\r" + "ERROR: Number of bottleneck stations exceeds total number of stations"
+		validInputs = false;
+	} else if (k == stations) {
+		alertmessage = alertmessage + "\r" + "Warning: Number of bottleneck stations is equal to total number of stations. Are there no other stations?"
 	}
 	
 	// CHECK SYSTEM STABILITY
@@ -218,7 +228,8 @@ function graves( lambda, tau, k, Qmax, Brate) {
 			expectedQLenIn: expectedQLenIn,
 			expectedQLenOut: expectedQLenOut,
 			probNoWait: probNoWait,
-			alertMessage: alertmessage
+			alertMessage: alertmessage,
+			Qmax: Qmax
 		}
 	}
 	
@@ -247,7 +258,8 @@ function graves( lambda, tau, k, Qmax, Brate) {
 			expectedInSystem: expectedInSystem,
 			expectedQLenIn: expectedQLenIn,
 			expectedQLenOut: expectedQLenOut,
-			alertMessage: alertmessage
+			alertMessage: alertmessage,
+			Qmax: Qmax
 		}
 	}
 	
