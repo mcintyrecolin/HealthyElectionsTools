@@ -1,4 +1,4 @@
-function graves( lambda, tau, k, capacity, staff, stations, Brate) {
+function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 	
 	// var DataFrame = dfjs.DataFrame
 	var Qmax = capacity-staff-stations;
@@ -18,15 +18,19 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 
 	// VALIDATE INPUTS RANGES
 	if (lambda<1 || lambda>10000)	{
-		alertmessage = "ERROR: Arrival rate not within range"
+		alertmessage = "ERROR: Arrival rate not within range";
 		validInputs = false;
 	}
 	if (tau<0 || tau>100)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Average time to vote not within range."
+		alertmessage = alertmessage+"\r"+ "ERROR: Average time to vote not within range.";
 		validInputs = false;
 	}
 	if (k<1 || k>100)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Number of voting stations not within range."
+		alertmessage = alertmessage+"\r"+ "ERROR: Number of voting stations not within range.";
+		validInputs = false;
+	}
+	if (!Number.isInteger(k))	{
+		alertmessage = alertmessage+"\r"+ "ERROR: Number of voting stations must be an integer.";
 		validInputs = false;
 	}
 	/*
@@ -40,21 +44,25 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 	}
 	*/
 	if (Qmax<0)	{
-			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range. Ensure total voter stations plus election staff does not exceed building capacity."
+			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range. Ensure total voter stations plus election staff does not exceed building capacity.";
 			validInputs = false;
 		} else if (Qmax>200) {
-			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range."
+			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range.";
 			validInputs = false;
 		}
+	if (!Number.isInteger(capacity) || !Number.isInteger(staff) || !Number.isInteger(stations)) {
+		alertmessage = alertmessage+"\r"+ "ERROR: Capacity, Staff, and Voter Processing must be integers.";
+		validInputs = false;
+	}
 	if (Brate<0 || Brate>1)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Outside Line Entry Chance not within range."
+		alertmessage = alertmessage+"\r"+ "ERROR: Outside Line Entry Chance not within range.";
 		validInputs = false;
 	}
 	if (k > stations) {
-		alertmessage = alertmessage + "\r" + "ERROR: Number of bottleneck stations exceeds total number of stations"
+		alertmessage = alertmessage + "\r" + "ERROR: Number of bottleneck stations exceeds total number of stations";
 		validInputs = false;
 	} else if (k == stations) {
-		alertmessage = alertmessage + "\r" + "Warning: Number of bottleneck stations is equal to total number of stations. Are there no other stations?"
+		alertmessage = alertmessage + "\r" + "Warning: Number of bottleneck stations is equal to total number of stations. Are there no other stations?";
 	}
 	
 	// CHECK SYSTEM STABILITY
@@ -67,8 +75,16 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 	var tau = tau / 60; 
 	//var X = X / 60;
 	//var Y = Y / 100;
-	var numIter = Qmax * 10 + 1; //length of array to calculate discrete probability of each state
-	
+
+	// Calculate Utilization
+	var serviceRate = k/tau;
+	var utilization = lambda/serviceRate;
+	console.log(utilization);
+	var numIter = Math.min(Math.max(200, Math.floor(6*utilization/(1-utilization))),10000); //length of array to calculate discrete probability of each state
+	// Calculate length of line for time target
+	var targetLength = maxTime/60 * serviceRate;
+
+
 	// CLAIM OUTPUTS
 	var aveW; // average waiting time (minutes)
 	var aveSysT; //average system time (mins)
@@ -79,6 +95,7 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 	var expectedInSystem = 0; // expected number of people in the system
 	var expectedQLenIn = 0; // expected queue length in the finite waiting room
 	var expectedQLenOut = 0; // expected queue length outside (would only be non-zero with a full waiting room)
+	var shortWaitProb = 0;
 
 
 /*
@@ -130,6 +147,7 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 		var probQisZero = Array.from(Array(numIter).fill(0)); // probability that none are waiting
 		var arrRate = Array.from(Array(numIter).fill(0)); // scaled arrival rate
 		var queueFullFlag = Array.from(Array(numIter).fill(0)); // flag if waiting room is full
+		var shortWaitFlag = Array.from(Array(numIter).fill(0)); // flag if line is short enough to meet target wait times
 		// Integer number of max in system
 		var maxInSystem = Qmax + k;
 
@@ -185,17 +203,25 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 				arrRate[i] = lambda*(1-Brate);
 				queueFullFlag[i] = 1;
 			}
+			// add flag for a short enough line
+			if ((inQueue[i]+outside[i])<=targetLength){
+				shortWaitFlag[i] = 1;
+				console.log((inQueue[i]+outside[i]));
+			} else {
+				shortWaitFlag[i] = 0;
+			}
 			// cumulatively sum results. Result will be probability-weighted averages
 			expectedInSystem += inSystemProbability[i] * numInSys[i];
 			expectedQLenIn += inSystemProbability[i] * inQueue[i];
 			expectedQLenOut += inSystemProbability[i] * outside[i];
 			effArrRate += inSystemProbability[i] * arrRate[i];
 			probBlock += inSystemProbability[i] * queueFullFlag[i];
+			shortWaitProb += inSystemProbability[i] * shortWaitFlag[i];
 
 		}
 
 		//use littles law to calculate the rest of the results
-		aveW = 60*(expectedQLenIn)/effArrRate;
+		aveW = 60*(expectedQLenIn + expectedQLenOut)/effArrRate;
 		aveSysT = 60*(expectedInSystem)/effArrRate;
 
 		// probability of no wait
@@ -216,6 +242,8 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 		expectedQLenIn = expectedQLenIn.toFixed(1);
 		expectedQLenOut = expectedQLenOut.toFixed(1);
 		probNoWait = probNoWait.toFixed(2);
+		utilization = utilization.toFixed(2);
+		shortWaitProb = shortWaitProb.toFixed(2);
 
 		return {
 			aveW: aveW,
@@ -229,7 +257,9 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 			expectedQLenOut: expectedQLenOut,
 			probNoWait: probNoWait,
 			alertMessage: alertmessage,
-			Qmax: Qmax
+			Qmax: Qmax,
+			utilization: utilization,
+			shortWaitProb: shortWaitProb
 		}
 	}
 	
@@ -247,6 +277,8 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 		var expectedInSystem = "--";
 		var expectedQLenIn = "--";
 		var expectedQLenOut = "--";
+		var utilization = "--";
+		var shortWaitProb = "--";
 		
 		return {		
 			aveW: aveW,
@@ -259,7 +291,9 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate) {
 			expectedQLenIn: expectedQLenIn,
 			expectedQLenOut: expectedQLenOut,
 			alertMessage: alertmessage,
-			Qmax: Qmax
+			Qmax: Qmax,
+			utilization: utilization,
+			shortWaitProb: shortWaitProb
 		}
 	}
 	
