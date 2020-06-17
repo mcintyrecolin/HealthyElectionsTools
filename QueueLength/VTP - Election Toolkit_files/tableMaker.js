@@ -25,7 +25,7 @@ function makeTable() {
 						+ res.aveW + "</td><td>" 
 						//+ res.aveSysT + "</td><td>" 
 						//+ res.expectedInSystem + "</td><td>" 
-						+ (parseFloat(res.expectedQLenIn) + parseFloat(res.expectedQLenOut)) + "</td><td>" 
+						+ ((parseFloat(res.expectedQLenIn) + parseFloat(res.expectedQLenOut))).toFixed(1) + "</td><td>" 
 						+ res.expectedQLenOut + "</td><td>" 
 						//+ res.probNoWait + "</td><td>" 
 						+ (parseFloat(res.probBlock)*100).toFixed(0) + "%</td><td>" 

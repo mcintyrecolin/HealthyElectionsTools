@@ -226,12 +226,6 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 
 		// probability of no wait
 		var probNoWait = probQisZero.reduce((a, b) => a + b, 0)
-	
-		// check stability
-		if (effArrRate >= k / tau)	{ 
-			alertmessage = alertmessage+"\r"+ "ERROR: Data entered produces unstable results !\nOn average the number of people that arrive exceeds the number of people that the system can handle. To make the system stable, decrease the arrival rate or the time to vote, or increase the number of stations in the system."
-			stable = false;
-		}	
 
 		//Round answers
 		aveW = aveW.toFixed(1);
@@ -244,6 +238,24 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 		probNoWait = probNoWait.toFixed(2);
 		utilization = utilization.toFixed(2);
 		shortWaitProb = shortWaitProb.toFixed(2);
+
+				// check stability
+		if (effArrRate >= k / tau)	{ 
+			alertmessage = alertmessage+"\r"+ "ERROR: Data entered produces unstable results !\nOn average the number of people that arrive exceeds the number of people that the system can handle. To make the system stable, decrease the arrival rate or the time to vote, or increase the number of stations in the system."
+			stable = false;
+			var aveW = "--";
+			// var reqW = "--";
+			// var reqM = "--";
+			var aveSysT = "--";
+			var probBlock = "--";
+			var effArrRate = "--";
+			var expectedInSystem = "--";
+			var expectedQLenIn = "--";
+			var expectedQLenOut = "--";
+			var utilization = "--";
+			var shortWaitProb = "--";
+
+		}	
 
 		return {
 			aveW: aveW,

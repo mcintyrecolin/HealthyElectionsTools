@@ -83,10 +83,10 @@ var InteractiveTable = {
                     var util = lambda/(k*60/tau);
                     if(util>=1){
                         item.closest('tr').getElementsByClassName("alerts")[0].innerHTML = '<button class="table-remove btn btn-danger btn-xs" \
-                        data-toggle="tooltip" data-placement = "top" title="System over capacity. More stations or faster service needed."><i class="fas fa-exclamation"></i>';
+                        data-toggle="tooltip" data-placement = "top" title="System over capacity. More stations or faster service needed."><i class="fas fa-exclamation"></i></button>';
                     } else if(util>(1/1.1)){
                         item.closest('tr').getElementsByClassName("alerts")[0].innerHTML = '<button class="table-remove btn btn-warning btn-xs" \
-                        data-toggle="tooltip" data-placement = "top" title="System within 10% of capacity limit. Small changes in arrival rates will cause lines to grow."><i class="fas fa-exclamation"></i>';
+                        data-toggle="tooltip" data-placement = "top" title="System within 10% of capacity limit. Small changes in arrival rates will cause lines to grow."><i class="fas fa-exclamation"></i></button>';
                     } else {
                         item.closest('tr').getElementsByClassName("alerts")[0].innerHTML = "";
                     }

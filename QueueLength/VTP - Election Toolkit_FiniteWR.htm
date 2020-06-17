@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="http://web.mit.edu/docs-assets/ico/favicon.png">
+    <link rel="stylesheet" media="all" href="./VTP - Election Toolkit_files/Pantheon_CSS/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css">
+    <link rel="stylesheet" media="all" href="./VTP - Election Toolkit_files/Pantheon_CSS/css_lQ4D06JPnsTCqcAl-sJ26Lghvgn02xjMJbRUamKZvBQ.css">
         
     <script async="" src="./VTP - Election Toolkit_files/analytics.js"></script>
     <script src="https://kit.fontawesome.com/6364ea47c0.js" crossorigin="anonymous"></script>
@@ -17,16 +19,16 @@
             console.log(mode);
             console.log(choice);
 			if(choice==="checkin"){
-				    $("#PollingData th").eq(6).text("Number of check-in stations");
-				    $("#PollingData th").eq(5).text("Average time for check-in");
+				    $("#PollingData th").eq(5).text("Number of check-in stations");
+				    $("#PollingData th").eq(6).text("Average time for check-in");
 				//$("#resultTable th").eq(3).text("Number of Check-In Stations required to meet the service level");
 				} else if(choice=="voting") {
-				    $("#PollingData th").eq(6).text("Number of voting stations");
-				    $("#PollingData th").eq(5).text("Average time for voting");	
+				    $("#PollingData th").eq(5).text("Number of voting stations");
+				    $("#PollingData th").eq(6).text("Average time for voting");	
 				//$("#resultTable th").eq(3).text("Number of voting stations required to meet the service level");
 				} else {
-                    $("#PollingData th").eq(6).text("Number of ballot scanners");
-                    $("#PollingData th").eq(5).text("Average time for ballot scanning");   
+                    $("#PollingData th").eq(5).text("Number of ballot scanners");
+                    $("#PollingData th").eq(6).text("Average time for ballot scanning");   
                 }
 			}
 	    
@@ -104,14 +106,14 @@
 <body class="home no-bg">
 <a name="top"></a>
 	<div class="wrapper">
-		<div class="header"> 
-				<nav class="navbar navbar-expand-sm bg-dark">
+        <div class="header"> 
+                <nav class="navbar navbar-expand-sm bg-dark">
   <!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<a class="navbar-brand" style="color:white; font:Segoe, &#39;Segoe UI&#39;, &#39;DejaVu Sans&#39;, &#39;Trebuchet MS&#39;, Verdana, sans-serif; text-decoration:none" href="http://web.mit.edu/vtp/calc1.html#home">Socially Distanced Polling Place Queue Model</a>
-					</div>
-				</nav>
-		</div><!-- /.header -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" style="color:white; font:Segoe, &#39;Segoe UI&#39;, &#39;DejaVu Sans&#39;, &#39;Trebuchet MS&#39;, Verdana, sans-serif; text-decoration:none" href="http://web.mit.edu/vtp/calc1.html#home">Socially Distanced Polling Place Queue Model</a>
+                    </div>
+                </nav>
+        </div><!-- /.header -->
 
     <!-- /.section -->
 
@@ -171,7 +173,7 @@
                       	<form name="linetypeform">
                         	Select Bottleneck: 
                             <!--<i class="far fa-question-circle" data-toggle="tooltip" data-placement = "top" title="To find the bottleneck, calculate the service rate of each step (# of stations / average service time) and choose the step with the lowest service rate"></i>-->
-                            <select class="bootstrap-select" id="bottleneckselect" data-toggle="tooltip" data-placement = "top" title="This model assumes Check In is the bottleneck. You may select a different bottleneck to update the column headers. The math will not change--see below for a description of the assumptions">
+                            <select class="bootstrap-select" style="width: 200px"    id="bottleneckselect" data-toggle="tooltip" data-placement = "top" title="This model assumes a bottleneck at check in as a baseline. For other bottlenecks, see below for a description of the assumptions. Changing the bottleneck does not change the math.">
                                 <option value="checkin" selected="selected">Check In</option>
                                 <option value="voting" class="text-secondary">Voting Machines/Booths</option>
                                 <option value="scanning" class="text-secondary">Ballot Scanners</option>
@@ -180,7 +182,7 @@
 						</form>    
 						<br> 
                                 
-           				<button id="clear" class = "btn btn-sm btn-warning">Clear Data</button>
+
                         <br>
 
                         
@@ -189,9 +191,9 @@
                                 <tr>
                                     <th data-toggle="tooltip" data-placement = "top" title="Name or Number of Polling Place">Polling Place</th>
                                     <th data-toggle="tooltip" data-placement = "top" title="Room capacity with social distancing measures">Room Capacity</th>
-                                    <th data-toggle="tooltip" data-placement = "top" title="Maximum number of staff in room during voting">Staff in Room</th>
-                                    <th data-toggle="tooltip" data-placement = "top" title="Number of places a voter can be while in the voting process (e.g. Check-in stations + voting booths + ballot scanners)">Voter Processing Points</th>
-                                    <th data-toggle="tooltip" data-placement = "top" title="Calculated based on three previous inputs">Inside Queue Capacity</th>
+                                    <th data-toggle="tooltip" data-placement = "top" title="Maximum number of total non-voters (election staff, security, observers, etc.) in room during voting">Non-voters in Room</th>
+                                    <th data-toggle="tooltip" data-placement = "top" title="Number of distinct places a voter can be while in the voting process (e.g. # of Check-in stations + # voting booths + # ballot scanners)">Voter Processing Points</th>
+                                    <th data-toggle="tooltip" data-placement = "top" title="Calculated based on three previous inputs. The maximum number of voters that could be in line in the polling place waiting to start the vote process">Inside Queue Capacity</th>
                                     <th data-toggle="tooltip" data-placement = "top" title="Number of places a voter may check in">Number of Check-In Stations</th>
                                     <th data-toggle="tooltip" data-placement = "top" title="Average time to check in including all activities between starting a given voter and starting the next voter. VTP recommends using a weighted average of all voter types (e.g. provisional or not)">Average time for check-in</th>
                                     <th data-toggle="tooltip" data-placement = "top" title="Hourly arrival rate of voters. VTP recommends using an upper limit like the busiest 2 hour period">Arrival rate</th>
@@ -242,6 +244,7 @@
                     
                     
 						<button id="calculate" class="btn btn-large btn-info"  data-toggle="tooltip" data-placement = "top" title="Populate Results Table">Calculate</button>
+                        <button id="clear" class = "btn btn-large btn-warning float-right">Clear Data</button>
                         
                     </div> <!-- End Interactive Table div -->
                 </div><!-- End Column div -->
@@ -250,21 +253,20 @@
             <div class="row">
                 <div class="col-sm-12 col-12 col-md-12"><br>
 				    <h2 align="left" class="section-title-noline"><b>Results</b></h2>
-				    <button onclick="clearTable();" class = "btn btn-sm btn-warning">Clear Data</button>
 
                         <table id="resultTable" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>Precinct</th>
-                                        <th>Average Total Wait Time (minutes)</th>
+                                        <th data-toggle="tooltip" data-placement = "top" title="Average total time waiting prior to bottleneck">Average Total Wait Time (minutes)</th>
                                         <!--<th>Average Time in System (minutes)</th>-->
                                         <!--<th>Expected Voters in System</th>-->
-                                        <th>Average Total Queue Length</th>
-                                        <th>Average Outside Queue Length</th>
+                                        <th data-toggle="tooltip" data-placement = "top" title="Average number of people waiting prior to bottleneck" >Average Total Queue Length</th>
+                                        <th data-toggle="tooltip" data-placement = "top" title="Average number of people waiting outside of polling place">Average Outside Queue Length</th>
                                         <!--<th>Probability of no wait</th>-->
-                                        <th>Percent of time room is full</th>
+                                        <th data-toggle="tooltip" data-placement = "top" title="Fraction of time queue inside polling place is full">Percent of time room is full</th>
                                         <!--<th>Effective Arrival Rate</th>-->
-                                        <th>Chance Voter Waits Longer than Target</th>
+                                        <th data-toggle="tooltip" data-placement = "top" title="Fraction of voters who wait longer than target wait time">Chance Voter Waits Longer than Target</th>
                                         <th>Alert</th>
                                     </tr>
                                 </thead>
@@ -274,6 +276,8 @@
                                     </tr>
                                 </tbody>              
                         </table>
+
+                    <button onclick="clearTable();" class = "btn btn-large btn-warning float-right">Clear Data</button>
                 </div><!-- End Column div -->
             </div><!-- End Row div -->
             <br><br>
@@ -285,10 +289,14 @@
                 <div class="col-sm-12 col-12 col-md-12">
                     <br>
                     <h2 align="left" class="section-title-noline">Model Assumptions</h2>
-                    <p> This tool uses queueing theory to model a polling site which limits the number of voters that may be present at any one time. </p>
-                    <p> The tool evaluates a classic queuing model, known as an “M/M/k system with a finite waiting room.”   For modeling a polling site, we assume that voters arrive at a random rate, and join a single queue that is being served by a set of parallel stations or servers. In a polling site, we assume that the check in station is the bottleneck, as seems to be the case in many polling places.  The model may still be useful if the bottleneck is at another stip, though we do not account for effects such as a line backing up through previous steps.</p>
-                    <p> In addition for this model, we assume that the polling site has a maximum occupancy, and will limit the number of voters that can be in the site at any time.  We capture this in the model by imposing a limit on the number of voters that can be in line waiting at any point in time. As a conservative estimate, we assume that all voting booths and scanning machines always have one voter and thus reduce the number allowed to wait in line.</p>
-                    <p>  In addition to using the tool on this web page, you can download an Excel spreadsheet that will perform the same calculations.  One advantage of the spreadsheet is that it is easier to analyze multiple precincts at one time.</p>
+
+
+                    <p> This tool uses queueing theory to model a single process step at a polling site for which there are limits on the number of voters that may be present at any one time.
+                    <p> The tool relies on a classic queuing model, known as an “M/M/k system.” For this model of a polling site, we assume that voters arrive randomly with a constant arrival rate, and join a single queue that is being served by a set of parallel stations or servers. In a polling site, we assume that we are modeling the bottleneck step in the process; this might be the check in stations, or the voting stations, or possibly the ballot scanning station.   
+                    <p> When the bottleneck is the check-in station, then the model reports only on the amount of time a voter would wait in line prior to check in; in effect, we assume that there is minimal waiting at the downstream steps in the process of voting and ballot scanning.  When the bottleneck is the voting machines or booths,  then the model reports on the amount of time a voter would wait in line prior to going to a voting station;  in practice due to space limits and regulations at many polling sites, much of this waiting would typically occur in the line for check in so as to allow voters sufficient privacy when casting their ballots. 
+                    <p> In addition for this model, we assume that the polling site has a maximum occupancy that will limit the number of voters that can be in the site at any time.  We capture this in the model by imposing a limit on the number of voters that can be in line waiting inside the facility at any point in time. As a conservative estimate, we assume that all stations in the vote process (that is, the number of check in stations, plus the number of voting booths, plus the number of scanning machines) always have one voter and thus reduce the number of voters allowed to wait in line.
+                    <p> This version of the model assumes that when the facility is full, the waiting line to vote will extend outside the facility.  We then assume that any arriving voter will join this queue and wait.
+                    <p> In addition to using the tool on this web page, you can download an Excel spreadsheet that will perform the same calculations. One advantage of the spreadsheet is that it is easier to analyze multiple precincts at one time.
 
                     <br>
                     <h4 style="color:#122336">Developers: Stephen Graves and Colin McIntyre</h4>
