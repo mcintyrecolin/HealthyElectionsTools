@@ -257,7 +257,7 @@
                         <table id="resultTable" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Precinct</th>
+                                        <th>Polling Place</th>
                                         <th data-toggle="tooltip" data-placement = "top" title="Average total time waiting prior to bottleneck">Average Total Wait Time (minutes)</th>
                                         <!--<th>Average Time in System (minutes)</th>-->
                                         <!--<th>Expected Voters in System</th>-->
@@ -270,7 +270,7 @@
                                         <th>Alert</th>
                                     </tr>
                                 </thead>
-                                <tbody>                 
+                                <tbody style="white-space: pre-line">                 
                                     <tr class="noDataLine">
                                         <td colspan="10" class="font-italic text-center">Table has no data</td>
                                     </tr>
@@ -296,7 +296,7 @@
                     <p> When the bottleneck is the check-in station, then the model reports only on the amount of time a voter would wait in line prior to check in; in effect, we assume that there is minimal waiting at the downstream steps in the process of voting and ballot scanning.  When the bottleneck is the voting machines or booths,  then the model reports on the amount of time a voter would wait in line prior to going to a voting station;  in practice due to space limits and regulations at many polling sites, much of this waiting would typically occur in the line for check in so as to allow voters sufficient privacy when casting their ballots. 
                     <p> In addition for this model, we assume that the polling site has a maximum occupancy that will limit the number of voters that can be in the site at any time.  We capture this in the model by imposing a limit on the number of voters that can be in line waiting inside the facility at any point in time. As a conservative estimate, we assume that all stations in the vote process (that is, the number of check in stations, plus the number of voting booths, plus the number of scanning machines) always have one voter and thus reduce the number of voters allowed to wait in line.
                     <p> This version of the model assumes that when the facility is full, the waiting line to vote will extend outside the facility.  We then assume that any arriving voter will join this queue and wait.
-                    <p> In addition to using the tool on this web page, you can download an Excel spreadsheet that will perform the same calculations. One advantage of the spreadsheet is that it is easier to analyze multiple precincts at one time.
+                    <p> In addition to using the tool on this web page, you can download an Excel spreadsheet that will perform the same calculations. One advantage of the spreadsheet is that it is easier to analyze multiple polling places at one time.
 
                     <br>
                     <h4 style="color:#122336">Developers: Stephen Graves and Colin McIntyre</h4>

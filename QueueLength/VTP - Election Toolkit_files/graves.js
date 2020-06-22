@@ -18,19 +18,19 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 
 	// VALIDATE INPUTS RANGES
 	if (lambda<1 || lambda>10000)	{
-		alertmessage = "ERROR: Arrival rate not within range";
+		alertmessage = "ERROR: Arrival rate not within range"+"\r\n";
 		validInputs = false;
 	}
 	if (tau<0 || tau>100)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Average time to vote not within range.";
+		alertmessage = alertmessage+ "ERROR: Average time to vote not within range."+"\r\n";
 		validInputs = false;
 	}
 	if (k<1 || k>100)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Number of voting stations not within range.";
+		alertmessage = alertmessage+ "ERROR: Number of check in stations not within range."+"\r\n";
 		validInputs = false;
 	}
 	if (!Number.isInteger(k))	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Number of voting stations must be an integer.";
+		alertmessage = alertmessage+ "ERROR: Number of check in stations must be an integer."+"\r\n";
 		validInputs = false;
 	}
 	/*
@@ -44,25 +44,26 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 	}
 	*/
 	if (Qmax<0)	{
-			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range. Ensure total voter stations plus election staff does not exceed building capacity.";
-			validInputs = false;
+			Qmax = 0;
+			alertmessage = alertmessage+ "Waring: Maximum line length is below 0. Results assume maximum line length is equal to 0. The current room does not have enough capacity to handle your staff and voter stations. Consider a larger room, fewer staff, or fewer voter processing points."+ "\r\n";
+			//validInputs = false;
 		} else if (Qmax>200) {
-			alertmessage = alertmessage+"\r"+ "ERROR: Maximum line length not within range.";
+			alertmessage = alertmessage+ "ERROR: Maximum line length not within range, decrease to below 200."+"\r\n";
 			validInputs = false;
 		}
 	if (!Number.isInteger(capacity) || !Number.isInteger(staff) || !Number.isInteger(stations)) {
-		alertmessage = alertmessage+"\r"+ "ERROR: Capacity, Staff, and Voter Processing must be integers.";
+		alertmessage = alertmessage+ "ERROR: Capacity, Staff, and Voter Processing must be integers."+"\r\n";
 		validInputs = false;
 	}
 	if (Brate<0 || Brate>1)	{
-		alertmessage = alertmessage+"\r"+ "ERROR: Outside Line Entry Chance not within range.";
+		alertmessage = alertmessage+ "ERROR: Outside Line Entry Chance not within range."+"\r\n";
 		validInputs = false;
 	}
 	if (k > stations) {
-		alertmessage = alertmessage + "\r" + "ERROR: Number of bottleneck stations exceeds total number of stations";
+		alertmessage = alertmessage + "ERROR: Number of bottleneck stations exceeds total number of stations"+"\r\n";
 		validInputs = false;
 	} else if (k == stations) {
-		alertmessage = alertmessage + "\r" + "Warning: Number of bottleneck stations is equal to total number of stations. Are there no other stations?";
+		alertmessage = alertmessage + "Warning: Number of bottleneck stations is equal to total number of stations. Are there no other stations?"+"\r\n";
 	}
 	
 	// CHECK SYSTEM STABILITY
@@ -241,7 +242,7 @@ function graves( lambda, tau, k, capacity, staff, stations, Brate, maxTime) {
 
 				// check stability
 		if (effArrRate >= k / tau)	{ 
-			alertmessage = alertmessage+"\r"+ "ERROR: Data entered produces unstable results !\nOn average the number of people that arrive exceeds the number of people that the system can handle. To make the system stable, decrease the arrival rate or the time to vote, or increase the number of stations in the system."
+			alertmessage = alertmessage+ "ERROR: Data entered produces unstable results! On average the number of people that arrive exceeds the number of people that the system can handle. To make the system stable, decrease the arrival rate or the time to vote, or increase the number of stations in the system."+"\r\n";
 			stable = false;
 			var aveW = "--";
 			// var reqW = "--";

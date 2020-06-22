@@ -67,7 +67,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.46923628"
+     inkscape:zoom="0.51286362"
      inkscape:cx="782.07174"
      inkscape:cy="474.61087"
      inkscape:document-units="in"
@@ -78,7 +78,7 @@
      width="10in"
      inkscape:pagecheckerboard="true"
      inkscape:snap-global="true"
-     inkscape:window-width="1482"
+     inkscape:window-width="1440"
      inkscape:window-height="855"
      inkscape:window-x="0"
      inkscape:window-y="23"
@@ -91,7 +91,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -939,7 +939,7 @@
          x="147.66718"
          y="67.22982"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#d70f0f;fill-opacity:1;stroke-width:0.264583"
-         id="tspan1635">Election Staff: 9</tspan><tspan
+         id="tspan1635">Non-Voters in Room: 9</tspan><tspan
          sodipodi:role="line"
          x="147.66718"
          y="83.10482"
@@ -949,7 +949,7 @@
          x="147.66718"
          y="98.97982"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.7px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0abb15;fill-opacity:1;stroke-width:0.264583"
-         id="tspan1639">Maximum Queue Size: 8</tspan></text>
+         id="tspan1639">Inside Queue Capacity: 8</tspan></text>
     <rect
        ry="34.532318"
        y="48.034073"
