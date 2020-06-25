@@ -34,7 +34,7 @@ var InteractiveTable = {
                     <td><input class = "form-control input-sm qlen_input capacity_input" type="number"/></td>\
                     <td><input class = "form-control input-sm qlen_input staff_input" type="number"/></td>\
                     <td><input class = "form-control input-sm qlen_input totalstations_input" type="number"/></td>\
-                    <td class = "qcap align-middle" >-</td>\
+                    <<td class = "qcap align-top" >-</td>\
                     <td><input class = "form-control input-sm util_input stations_input" type="number"/></td>\
                     <td><input class = "form-control input-sm util_input time_input" type="number" step="0.25"/></td>\
                     <td><input class = "form-control input-sm util_input arrival_input" type="number"/></td>\
