@@ -28,15 +28,15 @@ body {
   font-family: "UntitledSans-Regular", sans-serif; }
 
 h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: "Triptych-Grotesque", sans-serif; }
 
 h2 {
   font-family: "Triptych-Grotesque", sans-serif;
   font-size: 1.625rem;
   color: rgba(0, 0, 0, 0.85); }
-  h2.section-title-noline {
-    margin-bottom: 1.5rem; }
+h2.section-title-noline {
+  margin-bottom: 1.5rem; }
 
 h3 {
   font-family: "Triptych-Grotesque", sans-serif;
@@ -44,10 +44,10 @@ h3 {
   color: rgba(0, 0, 0, 0.85);
   margin-top: 0;
   margin-bottom: 1rem; }
-  h3.image-title {
-    font-family: "UntitledSans-Bold", sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem; }
+h3.image-title {
+  font-family: "UntitledSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem; }
 
 h4 {
   font-family: "Triptych-Grotesque", sans-serif;
@@ -76,10 +76,6 @@ tr, td, th {
   background: #f2eeeb;
   vertical-align: top;
   font-family: "UntitledSans-Regular", sans-serif; }
-  tr .tip, td .tip, th .tip {
-    font-size: .75rem;
-    padding-top: 1rem;
-    font-family: "UntitledSans-RegularItalic", sans-serif; }
 
 th {
   font: "UntitledSans-Medium", sans-serif; }
@@ -91,17 +87,30 @@ tr td:first-child {
 tr th {
   border-bottom: 1px solid #777;
   font-family: "UntitledSans-Medium", sans-serif; }
-  tr th:first-child {
-    border-right: 1px solid #777;
-    padding-bottom: 1rem; }
+tr th:first-child {
+  border-right: 1px solid #777;
+  padding-bottom: 1rem; }
 
 tr.empty, tr.noDataLine {
   border: none; }
-  tr.empty td, tr.noDataLine td {
-    border: none; }
+tr.empty td, tr.noDataLine td {
+  border: none; }
 
 tr .cell-alert {
   width: 20%; }
+
+tr .qcap.align-top {
+  padding-top: 1rem;
+  font-size: 1rem; }
+
+tr.small th {
+  font-size: .75rem;
+  padding-top: 1rem;
+  font-family: "UntitledSans-RegularItalic", sans-serif;
+  vertical-align: bottom; }
+
+tr.no-border th {
+  border-bottom: none; }
 
 .btn {
   border-radius: 0;
@@ -124,7 +133,7 @@ tr .cell-alert {
 /* Layout */
 header {
   width: 100%;
-  padding: 3rem 0 5rem 4rem; }
+  padding: 2rem 0 2rem 4rem; }
 
 .row {
   max-width: 102rem;
@@ -133,18 +142,19 @@ header {
   padding-top: 4rem;
   padding-left: 2rem;
   padding-right: 2rem; }
-  .row.tool-title {
-    padding-top: 0; }
+.row.tool-title {
+  padding-top: 0;
+  margin-left: 2rem; }
 
 .intro-container {
   background: white; }
-  .intro-container .intro-content {
-    display: flex;
-    flex-direction: row;
-    padding-top: 4rem;
-    padding-bottom: 4rem; }
-    .intro-container .intro-content .col-sm-4 {
-      padding-left: 0; }
+.intro-container .intro-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  padding-bottom: 4rem; }
+.intro-container .intro-content .col-sm-4 {
+  padding-left: 0; }
 
 .site-title a {
   font-size: 1.25rem;
@@ -152,5 +162,5 @@ header {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none; }
-  .site-title a span {
-    white-space: nowrap; }
+.site-title a span {
+  white-space: nowrap; }
