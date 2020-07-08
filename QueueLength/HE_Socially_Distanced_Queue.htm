@@ -120,6 +120,9 @@
         <button class = "btn btn-primary btn-xs" onClick="document.getElementById('instructions').scrollIntoView();">
     		Detailed Instructions and Tutorials
     	</button>
+    	<br>
+    	<br>
+    	<a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
       </div>
       <div class ="col-12 col-sm-8 text-center">
         <h3 class="image-title">Example Maximum Queue Size Calculation</h3>
@@ -144,21 +147,22 @@
             <option value="scanning" class="text-secondary">Ballot Scanners</option>
           </select>
         </form>
+        Note: Hover over column headers for a brief description
         <br>
         <br>
         <table id="inputTable">
           <thead>
           <tr class="no-border">
             <th>Polling Place</th>
-            <th>Room Capacity</th>
+            <th data-toggle="tooltip" data-placement = "top" title="Maximum number people in room per social distancing guidelines">Room Capacity</th>
             <th data-toggle="tooltip" data-placement = "top" title="Maximum number of total non-voters (election staff, security, observers, etc.) in room during voting">Non-voters in Room</th>
-            <th data-toggle="tooltip" data-placement = "top" title="Number of distinct places a voter can be while in the voting process (e.g. # of Check-in stations + # voting booths + # ballot scanners)">Voter Processing Points</th>
+            <th data-toggle="tooltip" data-placement = "top" title="Number of distinct places a voter can be while in the voting process (e.g. # of check-in stations + # voting booths + # ballot scanners)">Voter Processing Points</th>
             <th data-toggle="tooltip" data-placement = "top" title="Calculated based on three previous inputs. The maximum number of voters that could be in line in the polling place waiting to start the vote process">Inside Queue Capacity</th>
             <th>Number of Check-In Stations</th>
             <th data-toggle="tooltip" data-placement = "top" title="Average time to check in including all activities between starting a given voter and starting the next voter. Healthy Elections recommends using a weighted average of all voter types (e.g. provisional or not)">Average time for check-in</th>
             <th data-toggle="tooltip" data-placement = "top" title="Hourly arrival rate of voters. Healthy Elections recommends using an upper limit like the busiest 2 hour period">Arrival rate</th>
             <th data-toggle="tooltip" data-placement = "top" title="Tool will calculate % of voters with a wait time above the target">Target wait time</th>
-            <th>Alert</th>
+            <th data-toggle="tooltip" data-placement = "top" title="Alert symbols will appear if entered data indicates the system is approaching capacity">Alert</th>
             <!--<th>Outside Line Entry Chance [0,1]</th>-->
             <th>Delete Row</th>
           </tr>
@@ -204,7 +208,7 @@
       </div> <!-- End Interactive Table div -->
     </div><!-- End Column div -->
   </div><!-- End Row div -->
-  <hr>
+  <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
   <div class="table-container row">
     <div class="col-sm-12 col-12 col-md-12"><br>
       <h2 align="left" class="section-title-noline"><b>Results</b></h2>
@@ -212,10 +216,10 @@
         <thead>
         <tr>
           <th>Precinct</th>
-          <th>Average Total Wait Time (minutes)</th>
+          <th data-toggle="tooltip" data-placement = "top" title="Including time inside and outside the voting room">Average Total Wait Time (minutes)</th>
           <!--<th>Average Time in System (minutes)</th>-->
           <!--<th>Expected Voters in System</th>-->
-          <th>Average Total Queue Length (people)</th>
+          <th data-toggle="tooltip" data-placement = "top" title="Including voters waiting inside and outside the voting room">Average Total Queue Length (people)</th>
           <th>Average Outside Queue Length (people) </th>
           <!--<th>Probability of no wait</th>-->
           <th>Percent of time room is full</th>
@@ -233,7 +237,9 @@
       <button onclick="clearTable();" class = "btn btn-large btn-clear float-right">Clear Data</button>
     </div><!-- End Column div -->
   </div><!-- End Row div -->
+  <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
   <br><br>
+
   <div class="row">
 
     <!--<div class="col-sm-12 col-12 col-md-1"></div>-->
@@ -253,7 +259,7 @@
       <form method="get" action="./HE - Election Toolkit_files/FiniteWaitingRoom_CalculationMacro.xlsm">
         <button id="download" class="btn btn-large btn-primary">Download Excel Macro</button>
       </form>
-      <br><br>
+      <br>
       <a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a><br><br>
       <!--<a href="http://web.mit.edu/vtp/calc1.html#videos" button="" class="btn btn-large btn-warning smoothScroll">View Instructional Videos</a><br><br>-->
     </div> <!--Column Div  -->
@@ -299,6 +305,9 @@
   			<br><br><br>
   			<h3>The Excel-Based tool</h3>
   			<iframe width="100%" class = "myIframe"src="https://www.youtube.com/embed/FsgKjr0pjEQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			<br>
+  		<br>
+  		<a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
   		</div>
   	</div>
 
