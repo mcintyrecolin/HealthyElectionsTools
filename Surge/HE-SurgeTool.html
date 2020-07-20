@@ -48,39 +48,53 @@
     </header>
   </div>
   <div class="row tool-title">
-    <h1 align="left" class="section-title-noline large-12 medium-12 small-12"> Polling Place Queue Surge Analysis</h1>
+    <h1 align="left" class="section-title-noline large-12 medium-12 small-12">Morning Surge Queue Analysis</h1>
   </div>
   <!-- Inserted Colin's Code-->
   <div class="intro-container">
     <div class="intro-content row">
-      <!--<div class ="col-6 col-lg-6 text-center">
+      <div class ="col-6 col-lg-6">
+        <h3 align="left">Use This Tool To:</h3>
+        <ul>
+          <li>Determine when the morning surge will dissapate</li>
+          <li>Determine how long lines will get during the surge</li>
+        </ul>
+      </div>
+      <div class ="col-6 col-lg-6 text-center">
         <h3 align="left">Input Data Description</h3>
         <h4 align="left">Polling Place Characteristics</h4>
         <ol align="left">
-            <li><b>Building Capacity:</b> The total number of people allowed in the polling place at any time</li>
-            <li><b>Election Staff:</b> The maximum number of non-voters expected to be in the building at any time</li>
-            <li><b>Voter Stations:</b> The total number of different places a voter could be while not in line, including bottleneck stations </li>
-            <li><b>Bottleneck Service Statistics:</b> The number of stations and average service time on the slowest step in the voting process (e.g. check in). more information, see  <a href="http://web.mit.edu/vtp/calc1.html#home">the Voting Technology Project's previous voter queue calulator</a></li>
+            <li><b>System Type:</b> Use the dropdown to change the polling place setup</li>
+            <li><b>Number of stations:</b> The number of voters who can be served simultaneously at each step in the process</li>
+            <li><b>Average Times:</b> The average time each voter spends at each station </li>
         </ol>
         <h4 align="left">Voter Behavior Characteristics</h4>
         <ol align="left">
-            <li><b>Arrival Rate:</b> The average rate (voters/hour) that arrive at the polling place and consider joining the line</li>
-            <li><b>Outside Line Entry Chance:</b> The chance that an arriving voter will join the unofficial line outside the polling place when the building iscapacity</li>
+            <li><b>Arrival Rate:</b> The average rate (voters/hour) that arrive at the polling place <b>after</b> the polls open</li>
+            <li><b>Length at Start:</b> The length of the line prior to polls opening</li>
         </ol>
-      </div>-->
-  		<select class="bootstrap-select" style="width: 400px" id="setupselect" data-toggle="tooltip" data-placement = "top" title="Select the setup of your polling place">
-  			<option value="default" selected="selected">Check In > Voting > Scanners</option>
-  		  <option value="noScanners" class="text-secondary">Check In > Voting</option>
-  		  <option value="withHealth" class="text-secondary">Health Check > Check In > Voting > Scanners</option>
-  		</select>
+      </div>
+
     </div>
   </div>
-    <br>
-    <br>
-    <div class = "row">
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <h3 class = "text-center">Estimates Based on Prior Data</h3>  
+  <div class = "row">
+    <div class="col-12 col-md-6">
+      <div class="container">
+        <h2 align="left" class="section-title-noline">Inputs</h2>
+      </div>
+      <div class="card">
+        <div class="container">
+          <br>
+          <form name="linetypeform">
+            System Setup:
+            <select class="bootstrap-select" style="width: 400px" id="setupselect" data-toggle="tooltip" data-placement = "top" title="Select the setup of your polling place">
+              <option value="default" selected="selected">Check In > Voting > Scanners</option>
+              <option value="noScanners" class="text-secondary">Check In > Voting</option>
+              <option value="withHealth" class="text-secondary">Health Check > Check In > Voting > Scanners</option>
+            </select>
+          </form>
+          <br>
+          <h3>Polling Place Characteristics</h3>  
           <table id="precoviddata", class = "table table-bordered table-striped table-sm" width="50%">
             <thead>
               <tr>
@@ -122,161 +136,87 @@
               </tr>
             </tbody>
           </table>
-
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <h3 class = "text-center">Social Distancing Changes</h3>
-          <table class="table table-bordered table-sm"  id="checkboxtable">
+          <h3>Voter Arrival Characteristics</h3>
+          <table id = "surgeinputtable" class = "table table-bordered table-striped table-sm">
             <thead>
               <tr>
-                <td>Change</td>
-                <td>Parameter</td>
+                <td>Description</td>
+                <td>Units</td>
+                <td>Value</td>             
               </tr>
             </thead>
             <tbody>
-              <tr><!-- Voting Booths -->
-                <td>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked onchange="handleCheck(inputelem = this)">
-                    <label class="custom-control-label" for="customCheck1">Fewer Voting Booths</label>
-                  </div>
-                </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "50"/><span class="help-block">Percent Reduction</span></td>
+              <tr>
+                <td>Voter Arrival Rate</td>
+                <td>Voters/hr</td>
+                <td><input type = "numeric" class = "form-control input-sm input" value = "45" id = "voterrate_2016"/></td>
               </tr>
-              <tr><!-- Cleaning -->
-                <td>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck2" checked onchange="handleCheck(this)">
-                    <label class="custom-control-label" for="customCheck2">Cleaning Booths</label>
-                  </div>
-                </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "10"  id = "test"><span class="help-block">Cleaned every (X) voters</span></td>
+              <tr>
+                <td data-toggle="tooltip" data-placement = "top" title="Number of voters in line at start of day.">Length at Start</td>
+                <td>Voters</td>
+                <td><input type = "numeric" class = "form-control input-sm input" value = "30" id = "queuelength_2016"/></td>
               </tr>
-              <tr><!-- Longer Check In -->
-                <td>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck3" checked onchange="handleCheck(this)">
-                    <label class="custom-control-label" for="customCheck3">Longer Check In Time</label>
-                  </div>
-                </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "0.5"><span class="help-block">Additional Minutes</span></td>
-              </tr>
-              <tr><!-- Absentee Voters -->
-                <td>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck4" checked onchange="handleCheck(this)">
-                    <label class="custom-control-label" for="customCheck4">Increase in Absentee</label>
-                  </div>
-                </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "50"><span class="help-block">% of in-person voters now absentee</span></td>
-              </tr>
-            </tbody>
-          </table> <!--Table-->
-        </div><!--Card-->
-      </div><!--Col-->
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <h3 class = "text-center">Queue Surge Dynamics</h3>
-          <table id = "surgetable">
+          </table>
+        </div><!--Container-->
+      </div><!--Card-->
+    </div> <!-- Inputs Col -->
+    <div class="col-12 col-md-6">
+      <div class="container">
+        <h2 align="left" class="section-title-noline">Outputs</h2>
+      </div>
+      <div class="card">
+        <div class="container">
+          <br>
+          <h3>Surge Dynamics</h3>
+          <table id = "surgetable" class = "table table-bordered table-striped table-sm">
           	<thead>
           		<tr>
           			<td>Description</td>
           			<td>Units</td>
-          			<td>2016 Value</td>
-          			<td>2020 Value</td>
+          			<td>Value</td>
           		</tr>
           	</thead>
           	<tbody>
           		<tr>
-          			<td>Voter Arrival Rate</td>
-          			<td>Voters/hr</td>
-          			<td><input type = "numeric" class = "form-control input-sm input" value = "45" id = "voterrate_2016"/></td>
-          			<td id = "voterrate_2020" class="align-middle"></td>
-          		</tr>
-          		<tr>
-          			<td data-toggle="tooltip" data-placement = "top" title="Number of voters in line at start of day.">Length at Start</td>
-          			<td>Voters</td>
-          			<td><input type = "numeric" class = "form-control input-sm input" value = "30" id = "queuelength_2016"/></td>
-          			<td id = "queuelength_2020" class="align-middle"></td>
-          		</tr>
-          		<tr>
           			<td data-toggle="tooltip" data-placement = "top" title="Expected time until no line">Duration of Surge</td>
           			<td>Hours</td>
           			<td id = "surge_duration_2016" class = "align-middle">4</td>
-          			<td id = "surge_duration_2020" class = "align-middle">4</td>
           		</tr>
           		<tr>
           			<td data-toggle="tooltip" data-placement = "top" title="There is a 50% chance the line will be this long during the surge.">50% Chance</td>
           			<td>Voters</td>
           			<td id = "50percent_length_2016" class = "align-middle">4</td>
-          			<td id = "50percent_length_2020" class = "align-middle">4</td>
           		</tr>
           		<tr>
           			<td data-toggle="tooltip" data-placement = "top" title="There is a 25% chance the line will be this long during the surge.">25% Chance</td>
           			<td>Voters</td>
           			<td id = "25percent_length_2016" class = "align-middle">8</td>
-          			<td id = "25percent_length_2020" class = "align-middle">8</td>
           		</tr>
           		<tr>
           			<td data-toggle="tooltip" data-placement = "top" title="There is a 5% chance the line will be this long during the surge.">5% Chance</td>
           			<td>Voters</td>
           			<td id = "5percent_length_2016" class = "align-middle">10</td>
-          			<td id = "5percent_length_2020" class = "align-middle">10</td>
           		</tr>
           	</tbody>
           </table>
-        </div><!--Card-->
-      </div><!--Col-->
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <h3 class = "text-center">Estimates of 2020 Dynamics</h3>  
-          <table id="postcoviddata", class = "table table-bordered table-striped table-sm" width="50%">
-            <thead>
-              <tr>
-                <td>Task</td>
-                <td>Number of Stations</td>
-                <td>Average Time to Complete Task (min)</td>
-                <td>Throughput (voters/hr)</td>   
-                <td>Utilization (%)</td>        
-              </tr>
-            </thead>
-            <tbody id = "postcoviddatabody">
-              <tr id = "poststats_0" class = "outputs" style="display: none">
-                <td class="align-middle">Health Check</td>
-                <td class="stations_output align-middle"></td>
-                <td class="time_output align-middle"></td>
-                <td id = "postoutput_0" class="throughput_output align-middle"></td>
-                <td id = "postutilization_0" class="throughput_output align-middle"></td>
-              </tr>
-              <tr id = "poststats_1" class = "outputs">
-                <td class="align-middle">Check In</td>
-                <td class="stations_output align-middle"></td>
-                <td class="time_output align-middle"></td>
-                <td id = "postoutput_1" class="throughput_output align-middle"></td>
-                <td id = "postutilization_1" class="throughput_output align-middle"></td>
-              </tr>
-              <tr id = "poststats_2" class = "outputs">
-                <td class="align-middle">Voting</td>
-                <td class="stations_output align-middle"></td>
-                <td class="time_output align-middle"></td>
-                <td id = "postoutput_2" class="throughput_output align-middle"></td>
-                <td id = "postutilization_2" class="throughput_output align-middle"></td>
-              </tr>
-              <tr id = "poststats_3" class = "outputs">
-                <td class="align-middle">Scanning</td>
-                <td class="stations_output align-middle"></td>
-                <td class="time_output align-middle"></td>
-                <td id = "postoutput_3" class="throughput_output align-middle"></td>
-                <td id = "postutilization_3" class="throughput_output align-middle"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div><!--Card-->
-      </div><!--Col-->
-    </div><!--Row-->
+        </div><!--Container-->
+      </div><!--Card-->
+    </div><!--Col-->
+  </div><!--Row-->
+  <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
+  <div class="row">
+
+      <!--<div class="col-sm-12 col-12 col-md-1"></div>-->
+    <div class="col-sm-10 col-10 col-md-10">
+      <h2 align="left" class="section-title-noline">Model Assumptions</h2>
+      <p> This tool uses queueing theory to model the dissapation of a line given its downstream steps. This model is most easily thought of as studying the system in the early morning, immediately after opening the polls.  We assume that there is an empty system (i.e. nobody in the polling place) and a built up line (i.e. some number of people waiting outside) prior to opening the system, at which point the line is worked down at the average processing rate, and voters continue to arrive at the average arrival rate.</p>
+      <p> The tool relies on a classic queuing model, known as an “M/M/k system.” For this model of a polling site, we assume that voters arrive randomly with a constant arrival rate, and join a single queue that is being served by a set of parallel stations or servers. In a polling site, we assume that we are modeling the bottleneck step in the process; this might be the check in stations, or the voting stations, or possibly the ballot scanning station or a health check.</p>
+      <p> This tool assumes that immediately after opening, the line length decreases by the number of stations in the bottleneck. It then reports the line lengths that the system has a 50%, 25%, and 5% chance of reaching prior to reaching no line.</p>
+      <p>This tool may be used to study a built up line in the middle of the day with a slight variation, see the instructional videos for more.</p>
+
+      <h4 style="color:#122336">Developers: Stephen Graves and Colin McIntyre</h4>
+    </div><!-- Col -->
+  </div><!-- Row -->
 
 
   <!--
@@ -373,94 +313,13 @@
     
     <script type="text/javascript">
       //Function for updating the output table
-      function writeOutputTable(stations_values, changes_values, times_values, includeChanges){
-        //console.log('hello');
-        throughputs = [];
-        poststations = [];
-        posttimes = [];
-        //medical check
-        var rowToWrite = document.getElementById("poststats_0");
-        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[0];
-        rowToWrite.getElementsByClassName("time_output")[0].innerHTML = times_values[0];
-        throughputs.push(+(stations_values[0]*60/times_values[0]).toFixed(2));
-        poststations.push(stations_values[0]);
-        posttimes.push(times_values[0]);
-        //check in
-        var rowToWrite = document.getElementById("poststats_1");
-        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[1];
-        if(includeChanges[2]){
-          var newTime = times_values[1]+changes_values[2];
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        } else {
-          var newTime = times_values[1];
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        }
-        throughputs.push(+(stations_values[1]*60/newTime).toFixed(2));
-        poststations.push(stations_values[1]);
-        posttimes.push(newTime);
-        //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
-
-        // voting booths
-        var rowToWrite = document.getElementById("poststats_2");
-        if(includeChanges[0]){
-          var newStations = (stations_values[2]*(1-changes_values[0]/100)).toFixed(0);
-          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
-        } else {
-          var newStations = stations_values[2];
-          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
-        }
-        if(includeChanges[1]){
-          var newTime = (times_values[2]*(1+1/changes_values[1])).toFixed(2);
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        } else {
-          var newTime = times_values[2];
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        }
-        throughputs.push(+(newStations*60/newTime).toFixed(2));
-        poststations.push(newStations);
-        posttimes.push(newTime);
-        //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
-
-        //scanners
-        var rowToWrite = document.getElementById("poststats_3");
-        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[3];
-        rowToWrite.getElementsByClassName("time_output")[0].innerHTML = times_values[3];
-        throughputs.push(+(stations_values[3]*60/times_values[3]).toFixed(2));
-        poststations.push(stations_values[3]);
-        posttimes.push(times_values[3]);
-        //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
+      function writeOutputTable(stations_values, times_values){
 
         // Update Surge statistics
         var prethroughputs = updateThroughput();
-        var postrate = makeSurgeTable(stations_values, changes_values, times_values, includeChanges, prethroughputs, poststations, posttimes, throughputs);
+        makeSurgeTable(stations_values, times_values, prethroughputs);
 
 
-        //Calculate Bottleneck, write throughputs
-        var rows = document.getElementById("postcoviddatabody").getElementsByClassName('outputs');
-        var minVal = indexOfMin(throughputs);
-        var numRows = rows.length;
-        // write throughputs
-        for(i = 0; i<numRows; i++){
-          if(i==minVal){
-            if(throughputs[i]<=postrate){
-              // Report Bottleneck
-              document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-danger btn-xs" \
-                    data-toggle="tooltip" data-placement = "top" title="This is your new bottleneck. It does not have sufficient throughput to meet voter arrivals."><i class="fas fa-exclamation"></i></button>';
-              document.getElementById("postutilization_"+i.toString()).innerHTML =(Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
-
-            } else {
-              // Report Bottleneck
-              document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-success btn-xs" \
-                    data-toggle="tooltip" data-placement = "top" title="This is your new bottleneck"><i class="fas fa-exclamation"></i></button>';
-              document.getElementById("postutilization_"+i.toString()).innerHTML = (Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
-            }
-
-          } else {
-            // Report Not Bottleneck
-            document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i];
-            document.getElementById("postutilization_"+i.toString()).innerHTML = (Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
-          }
-        }
         // Activate the tooltips
         $(function () {
           $('[data-toggle="tooltip"]').tooltip();
@@ -471,20 +330,12 @@
     </script>
     <script type="text/javascript">
     	//Function to Calculate the Queue Length/surge
-    	function makeSurgeTable(stations_values, changes_values, times_values, includeChanges, prethroughputs, poststations, posttimes, throughputs){
+    	function makeSurgeTable(stations_values, times_values, prethroughputs){
     		//arrival rate
         	var prerate = document.getElementById('voterrate_2016').value;
-        	if(includeChanges[3]){
-        	  var postrate = prerate * (1-changes_values[3]/100);
-        	} else {
-        	  var postrate = prerate;
-        	}
-        	document.getElementById('voterrate_2020').innerHTML = postrate;
 
         	// starting line length
         	var prelength = document.getElementById('queuelength_2016').value;
-        	var postlength = prelength;
-        	document.getElementById('queuelength_2020').innerHTML = postlength;
 
         	// 2016 Calculations
         	var minVal = indexOfMin(prethroughputs);
@@ -493,26 +344,17 @@
         	var surge_time = calcSurgeTime(prelength, bottle_stations, bottle_time, prerate);
         	document.getElementById('surge_duration_2016').innerHTML = surge_time;
 
-        	var percentages = calcPercentages(numEntries=200, percentages=[0.5,0.25,0.05], initial_line = prelength, bottle_stations, bottle_time, arrival_rate = prerate);
-        	document.getElementById('50percent_length_2016').innerHTML = percentages[0];
-        	document.getElementById('25percent_length_2016').innerHTML = percentages[1];
-        	document.getElementById('5percent_length_2016').innerHTML = percentages[2];
+          if(prerate < bottle_stations * (60/bottle_time)){
+            var percentages = calcPercentages(numEntries=2000, percentages=[0.5,0.25,0.05], initial_line = prelength, bottle_stations, bottle_time, arrival_rate = prerate);
+            document.getElementById('50percent_length_2016').innerHTML = percentages[0];
+            document.getElementById('25percent_length_2016').innerHTML = percentages[1];
+            document.getElementById('5percent_length_2016').innerHTML = percentages[2];
+          } else {
+            document.getElementById('50percent_length_2016').innerHTML = "System is Unstable";
+            document.getElementById('25percent_length_2016').innerHTML = "System is Unstable";
+            document.getElementById('5percent_length_2016').innerHTML = "System is Unstable";
+          }
 
-        	// 2020 Calculations
-        	var minVal = indexOfMin(throughputs);
-        	var bottle_stations = poststations[minVal];
-        	var bottle_time = posttimes[minVal];
-        	var surge_time = calcSurgeTime(postlength, bottle_stations, bottle_time, postrate);
-        	document.getElementById('surge_duration_2020').innerHTML = surge_time;
-
-        	var percentages = calcPercentages(numEntries=200, percentages=[0.5,0.25,0.05], postlength = prelength, bottle_stations, bottle_time, arrival_rate = postrate);
-        	document.getElementById('50percent_length_2020').innerHTML = percentages[0];
-        	document.getElementById('25percent_length_2020').innerHTML = percentages[1];
-        	document.getElementById('5percent_length_2020').innerHTML = percentages[2];
-
-
-        	// Post rate needed to write output table
-        	return(postrate)
     	}
     	function calcSurgeTime(initial_line, bottle_stations, bottle_time, arrival_rate){
     		if(arrival_rate >= bottle_stations * (60/bottle_time)){
@@ -595,7 +437,7 @@
           if(i==minVal){
             // Report Bottleneck
             document.getElementById("preoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-success btn-xs" \
-                    data-toggle="tooltip" data-placement = "top" title="This is your bottleneck"><i class="fas fa-exclamation"></i></button>';
+                    data-toggle="tooltip" data-placement = "top" title="This is your bottleneck"  style="padding-left: 10px"><i class="fas fa-exclamation"></i></button>';
             document.getElementById("preutilization_"+i.toString()).innerHTML =(Math.min(prerate,throughputs[i])/throughputs[i]*100).toFixed(0);
           } else {
             // Report Not Bottleneck
@@ -638,33 +480,8 @@
         }
         return -1;
       }
-      //Deal with middle column checkboxes
-      var numChanges = document.getElementById("checkboxtable").getElementsByTagName('tbody')[0].getElementsByTagName('tr').length;
-      var includeChanges = new Array(numChanges).fill(true);
-      changes_values = new Array(numChanges).fill(0);
 
-      //function to disable the changes
-      function handleCheck(inputelem){
-        associatedInput = inputelem.closest('tr').getElementsByClassName('entry')[0];
-        includeChanges[indexInParent(inputelem.closest('tr'))] = !includeChanges[indexInParent(inputelem.closest('tr'))];
-        if(inputelem.checked){
-          //if the box has been turned on
-          associatedInput.disabled = false;
-        } else {
-          //if it has been turned off
-          associatedInput.disabled = true;
-        }
-        writeOutputTable(stations_values, changes_values, times_values, includeChanges);
-      }
       
-      // function to update the values of the changes
-      function updateChanges(){
-        var changeEntries = document.getElementById("checkboxtable").getElementsByClassName("entry");
-        for(i=0;i<changeEntries.length;i++) {
-          changes_values[i] = parseFloat(changeEntries[i].value);
-        }
-
-      }
 
     </script>
 
@@ -672,68 +489,54 @@
       function setupSelection(selector){
         var choice = selector.options[selector.selectedIndex].value;
         if(choice == "noScanners"){
-          document.getElementById("poststats_3").style.display = ("none");
           document.getElementById("preinput_3").style.display = ("none");
           document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = Infinity;
-          document.getElementById("poststats_0").style.display = ("none");
           document.getElementById("preinput_0").style.display = ("none");
           document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = Infinity;
         } 
         if(choice == "withHealth"){
-          document.getElementById("poststats_3").style.display = ("table-row");
           document.getElementById("preinput_3").style.display = ("table-row");
           if(document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value == Infinity){
             document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = 2;
           }
-          document.getElementById("poststats_0").style.display = ("table-row");
           document.getElementById("preinput_0").style.display = ("table-row");
           if(document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value == Infinity){
             document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = 2;
           }
         }
         if(choice == "default"){
-          document.getElementById("poststats_3").style.display = ("table-row");
           document.getElementById("preinput_3").style.display = ("table-row");
           if(document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value == Infinity){
             document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = 2;
           }
-          document.getElementById("poststats_0").style.display = ("none");
           document.getElementById("preinput_0").style.display = ("none");
           document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = Infinity;
         }
         updateInputs();
         updateThroughput();
-        writeOutputTable(stations_values, changes_values, times_values, includeChanges);
+        writeOutputTable(stations_values, times_values);
       }
     </script>
 
     <script type="text/javascript">
       //initialize
-      updateChanges();
       updateInputs();
       updateThroughput();
-      writeOutputTable(stations_values, changes_values, times_values, includeChanges);
+      writeOutputTable(stations_values, times_values);
 
       // add listeners for updates
       const input = document.getElementById("precoviddatabody").getElementsByTagName("input");
       for (let item of input) {
         item.addEventListener('blur', updateThroughput);
         item.addEventListener('blur', updateInputs);
-        item.addEventListener('blur', function(){writeOutputTable(stations_values, changes_values, times_values, includeChanges)},false);
+        item.addEventListener('blur', function(){writeOutputTable(stations_values, times_values)},false);
       }
 
-      // add listeners for updates
-      var changeEntriesGlob = document.getElementById("checkboxtable").getElementsByClassName("entry");
-      for (let item of changeEntriesGlob) {
-        item.addEventListener('blur', updateChanges);
-        item.addEventListener('blur', function(){writeOutputTable(stations_values, changes_values, times_values, includeChanges)},false);
-      }
 
       // add listeners for updates
-      var voterArrivalRate = document.getElementById("surgetable").getElementsByClassName("input");
+      var voterArrivalRate = document.getElementById("surgeinputtable").getElementsByClassName("input");
       for (let item of voterArrivalRate) {
-        item.addEventListener('blur', updateChanges);
-        item.addEventListener('blur', function(){writeOutputTable(stations_values, changes_values, times_values, includeChanges)},false);
+        item.addEventListener('blur', function(){writeOutputTable(stations_values, times_values)},false);
       }
 
       // add listeners for setup selections

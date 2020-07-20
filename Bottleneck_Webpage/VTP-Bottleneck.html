@@ -1,81 +1,156 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://live-healthy-elections.pantheonsite.io/ -->
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="js">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <!-- Bootstrap CSS -->
+  <link rel="shortlink" href="http://live-healthy-elections.pantheonsite.io/">
+  <link rel="canonical" href="http://live-healthy-elections.pantheonsite.io/">
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible">
+  <meta http-equiv="ImageToolbar" content="false">
+  <link rel="shortcut icon" href="http://live-healthy-elections.pantheonsite.io/profiles/contrib/lightning/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="revision" href="http://live-healthy-elections.pantheonsite.io/home">
 
-    <link href="./VTP-Bottleneck_files/bootstrap.css" rel="stylesheet">
-    <link href="./VTP-Bottleneck_files/addtl_styles.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6364ea47c0.js" crossorigin="anonymous"></script>
+  <title>Stanford-MIT Healthy Elections Project</title>
+  <link rel="stylesheet" media="all" href="./VTP-Bottleneck_files/Pantheon_files/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css">
+  <link rel="stylesheet" media="all" href="./VTP-Bottleneck_files/Pantheon_files/css_lQ4D06JPnsTCqcAl-sJ26Lghvgn02xjMJbRUamKZvBQ.css">
+  <link rel="stylesheet" media="all" href="./VTP-Bottleneck_files/Pantheon_files/css_lQ4D06JPnsTCqcAl-sJ26Lghvgn02xjMJbRUamKZvBQ.css">
 
-    <script type="text/javascript">
-      
-    </script>
+  <script async="" src="./HE - Election Toolkit_files/analytics.js"></script>
+  <script src="https://kit.fontawesome.com/6364ea47c0.js" crossorigin="anonymous"></script>
+  
 
-    <title>VTP-Bottleneck Tool</title>
-  </head>
-  <body>
-    <div class = "container-fluid">
-      <div class = "header ">
-        <nav class="navbar navbar-expand-sm bg-purple">
-          A Bottleneck Analysis Tool
-        </nav>
-      </div><!--Header-->
-    <div class="row text-center justify-content-around">
-      <div class="col-4"><button type="button" class="btn btn-responsive btn-primary">Check In > Voting > Scanning</button></div>
-      <div class="col-4"><button type="button" class="btn btn-xlarge btn-secondary">Check In > Voting</button></div>
-      <div class="col-4"><button type="button" class="btn btn-xlarge btn-secondary">Something Else?</button></div>
+  <link href="./VTP-Bottleneck_files/bootstrap.css" rel="stylesheet">
+  <link href="./VTP-Bottleneck_files/elections-styles/elections.css" rel="stylesheet">
+
+
+  <!--[if lte IE 8]>
+  <script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+  <![endif]-->
+
+  <meta class="foundation-mq">
+</head>
+<body class="lang-en queuelength-tool">
+<a href="http://live-healthy-elections.pantheonsite.io/#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+<div>
+  <div class="off-canvas-content" data-off-canvas-content="">
+    <header role="banner" aria-label="Site header">
+      <div class="left large-2">
+        <div id="site-name" class="site-title">
+          <a href="/" title="Stanford-MIT Healthy Elections Project Home"><span class="site-sponsors">Stanford-MIT</span> <span class="site-name">Healthy Elections Project</span></a>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="row tool-title">
+    <h1 align="left" class="section-title-noline large-12 medium-12 small-12"> Polling Place Queue Bottleneck Analysis</h1>
+  </div>
+  <!-- Inserted Colin's Code-->
+  <div class="intro-container">
+    <div class="intro-content row">
+      <div class ="col-6 col-lg-6">
+        <h3 align="left">Use This Tool To:</h3>
+        <ul>
+          <li>Evaluate a polling place's bottleneck and utilization</li>
+          <li>Determine the impact of social distancing changes</li>
+        </ul>
+      </div>
+      <div class ="col-6 col-lg-6 text-center">
+        <h3 align="left">Input Data Description</h3>
+        <h4 align="left">Polling Place Characteristics</h4>
+        <ul align="left">
+            <li><b>System Type:</b> Use the dropdown to change the polling place setup</li>
+            <li><b>Number of stations:</b> The number of voters who can be served simultaneously at each step in the process</li>
+            <li><b>Average Times:</b> The average time each voter spends at each station </li>
+        </ul>
+        <h4 align="left">Voter Behavior Characteristics</h4>
+        <ul align="left">
+            <li><b>Arrival Rate:</b> The average rate (voters/hour) that arrive at the polling place</li>
+        </ul>
+        <h4 align="left">Social Distancing Changes</h4>
+        <ul align="left">
+            <li>Check each box to activate or de-activate a COVID-driven change</li>
+            <li>Each input box has a parameter which controls the change</li>
+        </ul>
+      </div>
+
     </div>
-    <br>
-    <br>
-    <div class = "row bg-purple">
-      <div class="col-12 col-lg-4 bg-lightred col-md-offset-1">
-        <div class="card">
-          <h3 class = "text-center">Estimates Based on 2016</h3>  
-          <table id="precoviddata", class = "table table-bordered table-striped" width="50%">
+  </div>
+  <div class = "row">
+    <div class="col-12 col-md-6">
+      <div class="container">
+        <h2 align="left" class="section-title-noline">Inputs</h2>
+      </div>
+      <div class="card">
+        <div class="container">
+          <br>
+          <form name="linetypeform">
+            System Setup:
+            <select class="bootstrap-select" style="width: 400px" id="setupselect" data-toggle="tooltip" data-placement = "top" title="Select the setup of your polling place">
+              <option value="default" selected="selected">Check In > Voting > Scanners</option>
+              <option value="noScanners" class="text-secondary">Check In > Voting</option>
+              <option value="withHealth" class="text-secondary">Health Check > Check In > Voting > Scanners</option>
+            </select>
+          </form>
+          <br>
+          <h3>Polling Place Characteristics</h3>  
+          <table id="precoviddata", class = "table table-bordered table-striped table-sm" width="50%">
             <thead>
               <tr>
                 <td>Task</td>
                 <td>Number of Stations</td>
                 <td>Average Time to Complete Task (min)</td>
-                <td>Throughput (voters/hr)</td>                
+                <td>Throughput (voters/hr)</td>    
+                <td>Utilization (%)</td>               
               </tr>
             </thead>
             <tbody id = "precoviddatabody">
-              <tr id = "preinput_0" class = "inputs">
+              <tr id = "preinput_0" class = "inputs" style="display: none">
+                <td class="align-middle">Health Check</td>
+                <td><input type = "numeric" class = "form-control input-sm stations_input" value = "Infinity"/></td>
+                <td><input type = "numeric" class = "form-control input-sm time_input" value = "1"/></td>
+                <td id = "preoutput_0" class="align-middle"></td>
+                <td id = "preutilization_0" class="align-middle"></td>
+              </tr>
+              <tr id = "preinput_1" class = "inputs">
                 <td class="align-middle">Check In</td>
                 <td><input type = "numeric" class = "form-control input-sm stations_input" value = "2"/></td>
                 <td><input type = "numeric" class = "form-control input-sm time_input" value = "2"/></td>
-                <td id = "preoutput_0" class="align-middle"></td>
+                <td id = "preoutput_1" class="align-middle"></td>
+                <td id = "preutilization_1" class="align-middle"></td>
               </tr>
-              <tr id = "preinput_1" class = "inputs">
+              <tr id = "preinput_2" class = "inputs">
                 <td class="align-middle">Voting</td>
                 <td><input type = "numeric" class = "form-control input-sm stations_input" value = "12"/></td>
                 <td><input type = "numeric" class = "form-control input-sm time_input" value = "6"/></td>
-                <td id = "preoutput_1" class="align-middle"></td>
+                <td id = "preoutput_2" class="align-middle"></td>
+                <td id = "preutilization_2" class="align-middle"></td>
               </tr>
-              <tr id = "preinput_2" class = "inputs">
+              <tr id = "preinput_3" class = "inputs">
                 <td class="align-middle">Scanning</td>
                 <td><input type = "numeric" class = "form-control input-sm stations_input" value = "2"/></td>
                 <td><input type = "numeric" class = "form-control input-sm time_input" value = "1"/></td>
-                <td id = "preoutput_2" class="align-middle"></td>
-              </tr>
-              <tr>
-                <td colspan="2">Voter Arrival Rate (Voters/hr)</td>
-                <td colspan="2"><input type="numeric" name="arrivalrate" class="form-control input-sm float-right" value = "45" id="voterrate"></td>
+                <td id = "preoutput_3" class="align-middle"></td>
+                <td id = "preutilization_3" class="align-middle"></td>
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4 bg-lightred">
-        <div class="card">
-          <h3 class = "text-center">Social Distancing Changes</h3>
-          <table class="table table-bordered"  id="checkboxtable">
+          <h3>Voter Arrival Rate</h3> 
+          <table class="table table-bordered table-sm"  id="voterratetable">
+            <tbody>
+              <tr>
+                <td>Voter Arrival Rate (Voters/Hour)</td>
+                <td><input type = "numeric" class = "form-control input-sm time_input" value = "45" id = "voterrate_2016"></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Social Distancing Changes</h3>
+          <table class="table table-bordered table-sm"  id="checkboxtable">
             <thead>
               <tr>
                 <td>Change</td>
@@ -99,7 +174,7 @@
                     <label class="custom-control-label" for="customCheck2">Cleaning Booths</label>
                   </div>
                 </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "10"  id = "test"><span class="help-block">Cleaned every (X) voters</span></td>
+                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "10"  id = "test"><span class="help-block">Cleaned every (X) voters </span></td>
               </tr>
               <tr><!-- Longer Check In -->
                 <td>
@@ -117,57 +192,166 @@
                     <label class="custom-control-label" for="customCheck4">Increase in Absentee</label>
                   </div>
                 </td>
-                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "50"><span class="help-block">% of in-person voters now absentee</span></td>
+                <td><input type="numeric" name="boothreduciton" class="form-control input-sm entry" value = "50"><span class="help-block">% of in-person voters now absentee </span></td>
               </tr>
             </tbody>
           </table> <!--Table-->
-        </div><!--Card-->
-      </div><!--Col-->
-      <div class="col-12 col-lg-4 bg-lightred col-md-offset-1">
-        <div class="card">
-          <h3 class = "text-center">Estimates of 2020</h3>  
-          <table id="postcoviddata", class = "table table-bordered table-striped" width="50%">
-            <thead>
-              <tr>
-                <td>Task</td>
-                <td>Number of Stations</td>
-                <td>Average Time to Complete Task (min)</td>
-                <td>Throughput (voters/hr)</td>                
-              </tr>
-            </thead>
-            <tbody id = "postcoviddatabody">
-              <tr id = "poststats_0" class = "outputs">
-                <td class="align-middle">Check In</td>
-                <td class="stations_output"></td>
-                <td class="time_output"></td>
-                <td id = "postoutput_0" class="throughput_output align-middle"></td>
-              </tr>
-              <tr id = "poststats_1" class = "outputs">
-                <td class="align-middle">Voting</td>
-                <td class="stations_output"></td>
-                <td class="time_output"></td>
-                <td id = "postoutput_1" class="throughput_output align-middle"></td>
-              </tr>
-              <tr id = "poststats_2" class = "outputs">
-                <td class="align-middle">Scanning</td>
-                <td class="stations_output"></td>
-                <td class="time_output"></td>
-                <td id = "postoutput_2" class="throughput_output align-middle"></td>
-              </tr>
-              <tr>
-                <td colspan="2">Voter Arrival Rate (Voters/hr)</td>
-                <td colspan="2" id = "postvoterrate"></td>
-              </tr>
+        </div><!--Container-->
+      </div><!--Card-->
+    </div><!--Col-->
+    <div class="col-12 col-md-6">
+      <div class="container">
+        <h2 align="left" class="section-title-noline">Outputs</h2>
+      </div>
+      <div class="card">
+        <div class="container">
+        <br>
+        <h3>New Polling Place Characteristics</h3> 
+        <table id="postcoviddata", class = "table table-bordered table-striped table-sm" width="50%">
+          <thead>
+            <tr>
+              <td>Task</td>
+              <td>Number of Stations</td>
+              <td>Average Time to Complete Task (min)</td>
+              <td>Throughput (voters/hr)</td>   
+              <td>Utilization (%)</td>        
+            </tr>
+          </thead>
+          <tbody id = "postcoviddatabody">
+            <tr id = "poststats_0" class = "outputs" style="display: none">
+              <td class="align-middle">Health Check</td>
+              <td class="stations_output align-middle"></td>
+              <td class="time_output align-middle"></td>
+              <td id = "postoutput_0" class="throughput_output align-middle"></td>
+              <td id = "postutilization_0" class="throughput_output align-middle"></td>
+            </tr>
+            <tr id = "poststats_1" class = "outputs">
+              <td class="align-middle">Check In</td>
+              <td class="stations_output align-middle"></td>
+              <td class="time_output align-middle"></td>
+              <td id = "postoutput_1" class="throughput_output align-middle"></td>
+              <td id = "postutilization_1" class="throughput_output align-middle"></td>
+            </tr>
+            <tr id = "poststats_2" class = "outputs">
+              <td class="align-middle">Voting</td>
+              <td class="stations_output align-middle"></td>
+              <td class="time_output align-middle"></td>
+              <td id = "postoutput_2" class="throughput_output align-middle"></td>
+              <td id = "postutilization_2" class="throughput_output align-middle"></td>
+            </tr>
+            <tr id = "poststats_3" class = "outputs">
+              <td class="align-middle">Scanning</td>
+              <td class="stations_output align-middle"></td>
+              <td class="time_output align-middle"></td>
+              <td id = "postoutput_3" class="throughput_output align-middle"></td>
+              <td id = "postutilization_3" class="throughput_output align-middle"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>New Voter Arrival Characteristics</h3> 
+        <table class="table table-bordered table-sm"  id="voterratetable_2020">
+            <tbody>
+            <tr>
+              <td>Voter Arrival Rate (Voters/Hour)</td>
+              <td id = "voterrate_2020">45</td>
+            </tr>
             </tbody>
           </table>
-        </div><!--Card-->
-      </div><!--Col-->
-    </div><!--Row-->
-    </div><!--Container-->
+        </div>
+      </div><!--Card-->
+    </div><!--Col-->
+  </div><!--Row-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./VTP-Bottleneck_files/jquery-3.5.1.min.js"></script>
+
+  <!--
+    <a name="videos"></a>
+
+      <div class="row">
+      <br><br>
+              <div class="col-md-12"><br>
+          <h2 align="center" class="section-title-noline"><b>Instructional Videos</b></h2>
+              </div>
+
+
+        <div class="box center col-sm-12 col-12 col-md-12">
+          <p align="center">Part 1</p>
+              <div id="video1">
+                      <iframe width="1140" height="645" src="./VTP - Election Toolkit_files/KgiYqhHN_gA.html" frameborder="2"></iframe>
+                      <br><br>
+                  </div>
+          <a href="http://web.mit.edu/vtp/calc1.html#top" button="" class="btn btn-large smoothScroll">Back to Top</a><br><br>
+
+                  <p align="center">Part 2</p>
+                <div id="video2">
+                      <iframe width="1140" height="645" src="./VTP - Election Toolkit_files/YkvWzzv_a8A.html" frameborder="1"></iframe>
+              <br><br>
+                  </div>
+          <a href="http://web.mit.edu/vtp/calc1.html#top" button="" class="btn btn-large smoothScroll">Back to Top</a><br><br>
+
+
+          <p align="center">Part 3</p>
+            <div id="video3">
+                      <iframe width="1140" height="645" src="./VTP - Election Toolkit_files/g7vk2DPwfpU.html" frameborder="1"></iframe>
+                      <br><br>
+                  </div>
+          <a href="http://web.mit.edu/vtp/calc1.html#top" button="" class="btn btn-large smoothScroll">Back to Top</a><br><br>
+              </div><-- /.box ->change comment
+      </div><-- /.row ->change comment
+
+  -->
+
+
+
+
+  <!-- End Inserted Code From Colin-->
+  <footer>
+    <div class="row">
+      <div id="footer-first" class="large-6 columns">
+        <div>
+          <section id="block-footercontactinfo" data-block-plugin-id="block_content:c0c24aa9-111b-480c-8a82-0bca655a3abf" class="block-footercontactinfo block      block-block-content block-block-contentc0c24aa9-111b-480c-8a82-0bca655a3abf">
+            <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field-items">
+                <div class="field-item">
+                  <h4>Contact</h4>
+                  <p><a href="mailto:mitelectionlab@mit.edu">mitelectionlab@mit.edu</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="footer-last" class="large-6 columns">
+        <div>
+          <section id="block-footerlogos" data-block-plugin-id="block_content:e7c31c3a-5613-49d0-8380-8defac987eb5" class="block-footerlogos block block-block-content      block-block-contente7c31c3a-5613-49d0-8380-8defac987eb5">
+            <div class="field-wrapper body field field-block-content--body field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field-items">
+                <div class="field-item"><p>&nbsp;</p>
+                  <p><img alt="THE STANFORD-MIT HEALTHY ELECTIONS PROJECT" data-entity-type="file" data-entity-uuid="bdd12180-b4fd-46c9-8d33-75654a296598" height="37" src="      ./VTP-Bottleneck_files/Pantheon_files/he-footer-logos_0.png" width="481" class="align-right"></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="bottom-bar callout secondary">
+    <div class="row">
+      <div class="large-12 columns">
+        © 2020 The Stanford-MIT Healthy Elections Project All rights reserved.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/25","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"1759c2da286d23900fc4bd7bd8c145360897889ca7b98125e8aeceb7bf065648"}}</script>
+<script src="./VTP-Bottleneck_files/Pantheon_files/js_BJeCZ0MbcFqMP0F1gYhkMYSB6z6TwiHfr-Skf3nT_zs.js"></script>
+
+<script src="./VTP-Bottleneck_files/jquery-3.5.1.min.js"></script>
     <script src="./VTP-Bottleneck_files/popper.min.js"></script>
     <script src="./VTP-Bottleneck_files/bootstrap.bundle.min.js"></script>
     
@@ -176,53 +360,68 @@
       function writeOutputTable(stations_values, changes_values, times_values, includeChanges){
         //console.log('hello');
         throughputs = [];
-        //check in
+        poststations = [];
+        posttimes = [];
+        //medical check
         var rowToWrite = document.getElementById("poststats_0");
         rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[0];
-        if(includeChanges[2]){
-          var newTime = times_values[0]+changes_values[2];
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        } else {
-          var newTime = times_values[0];
-          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
-        }
-        throughputs.push(stations_values[0]*60/newTime);
-        //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
-
-        // voting booths
+        rowToWrite.getElementsByClassName("time_output")[0].innerHTML = times_values[0];
+        throughputs.push(+(stations_values[0]*60/times_values[0]).toFixed(2));
+        poststations.push(stations_values[0]);
+        posttimes.push(times_values[0]);
+        //check in
         var rowToWrite = document.getElementById("poststats_1");
-        if(includeChanges[0]){
-          var newStations = (stations_values[1]*(1-changes_values[0]/100)).toFixed(0);
-          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
-        } else {
-          var newStations = stations_values[1];
-          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
-        }
-        if(includeChanges[1]){
-          var newTime = (times_values[1]*(1+1/changes_values[1])).toFixed(2);
+        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[1];
+        if(includeChanges[2]){
+          var newTime = times_values[1]+changes_values[2];
           rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
         } else {
           var newTime = times_values[1];
           rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
         }
-        throughputs.push((newStations*60/newTime).toFixed(2));
+        throughputs.push(+(stations_values[1]*60/newTime).toFixed(2));
+        poststations.push(stations_values[1]);
+        posttimes.push(newTime);
+        //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
+
+        // voting booths
+        var rowToWrite = document.getElementById("poststats_2");
+        if(includeChanges[0]){
+          var newStations = (stations_values[2]*(1-changes_values[0]/100)).toFixed(0);
+          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
+        } else {
+          var newStations = stations_values[2];
+          rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = newStations;
+        }
+        if(includeChanges[1]){
+          var newTime = (times_values[2]*(1+1/changes_values[1])).toFixed(2);
+          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
+        } else {
+          var newTime = times_values[2];
+          rowToWrite.getElementsByClassName("time_output")[0].innerHTML = newTime;
+        }
+        throughputs.push(+(newStations*60/newTime).toFixed(2));
+        poststations.push(newStations);
+        posttimes.push(newTime);
         //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
 
         //scanners
-        var rowToWrite = document.getElementById("poststats_2");
-        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[2];
-        rowToWrite.getElementsByClassName("time_output")[0].innerHTML = times_values[2];
-        throughputs.push(stations_values[2]*60/times_values[2]);
+        var rowToWrite = document.getElementById("poststats_3");
+        rowToWrite.getElementsByClassName("stations_output")[0].innerHTML = stations_values[3];
+        rowToWrite.getElementsByClassName("time_output")[0].innerHTML = times_values[3];
+        throughputs.push(+(stations_values[3]*60/times_values[3]).toFixed(2));
+        poststations.push(stations_values[3]);
+        posttimes.push(times_values[3]);
         //rowToWrite.getElementsByClassName("throughput_output")[0].innerHTML = throughputs[throughputs.length-1];
 
         //arrival rate
-        var prerate = document.getElementById('voterrate').value;
+        var prerate = document.getElementById('voterrate_2016').value;
         if(includeChanges[3]){
           var postrate = prerate * (1-changes_values[3]/100);
         } else {
           var postrate = prerate;
         }
-        document.getElementById('postvoterrate').innerHTML = postrate;
+        document.getElementById('voterrate_2020').innerHTML = postrate;
 
 
         //Calculate Bottleneck, write throughputs
@@ -236,16 +435,19 @@
               // Report Bottleneck
               document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-danger btn-xs" \
                     data-toggle="tooltip" data-placement = "top" title="This is your new bottleneck. It does not have sufficient throughput to meet voter arrivals."><i class="fas fa-exclamation"></i></button>';
+              document.getElementById("postutilization_"+i.toString()).innerHTML =(Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
 
             } else {
               // Report Bottleneck
               document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-success btn-xs" \
                     data-toggle="tooltip" data-placement = "top" title="This is your new bottleneck"><i class="fas fa-exclamation"></i></button>';
+              document.getElementById("postutilization_"+i.toString()).innerHTML = (Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
             }
 
           } else {
             // Report Not Bottleneck
             document.getElementById("postoutput_"+i.toString()).innerHTML = throughputs[i];
+            document.getElementById("postutilization_"+i.toString()).innerHTML = (Math.min(postrate,throughputs[i])/throughputs[i]*100).toFixed(0);
           }
         }
         // Activate the tooltips
@@ -256,6 +458,7 @@
 
       }
     </script>
+
     <script type="text/javascript">
     // Dynamically update minimum value to calculate throughput of the system and identify the bottleneck
       function indexOfMin(arr) {
@@ -279,33 +482,44 @@
       function updateThroughput(){
         var rows = document.getElementById("precoviddatabody").getElementsByClassName('inputs');
         var throughputs = [];
+        //console.log(throughputs);
+        var prerate = document.getElementById('voterrate_2016').value;
         // get data from the table
         for (let row of rows) {
           var sta = row.getElementsByClassName("stations_input")[0].value;
           var cyc = row.getElementsByClassName("time_input")[0].value;
-          throughputs.push(sta*60/cyc);
+          throughputs.push(+(sta*60/cyc).toFixed(2));
         }
+        //console.log(throughputs);
         // check if all data has been entered
         /*let allNums = throughputs.every(function(e){
           return (!Number.isNaN(e) & e<Infinity);
         })*/
         var minVal = indexOfMin(throughputs);
+        //console.log(minVal);
         var numRows = rows.length;
+        //console.log(rows.length);
         // write throughputs
         for(i = 0; i<numRows; i++){
+          //console.log(i);
+          //console.log(i==minVal);
+          //console.log(i.toString());
           if(i==minVal){
             // Report Bottleneck
             document.getElementById("preoutput_"+i.toString()).innerHTML = throughputs[i] + ' <button class="btn btn-success btn-xs" \
                     data-toggle="tooltip" data-placement = "top" title="This is your bottleneck"><i class="fas fa-exclamation"></i></button>';
+            document.getElementById("preutilization_"+i.toString()).innerHTML =(Math.min(prerate,throughputs[i])/throughputs[i]*100).toFixed(0);
           } else {
             // Report Not Bottleneck
             document.getElementById("preoutput_"+i.toString()).innerHTML = throughputs[i];
+            document.getElementById("preutilization_"+i.toString()).innerHTML =(Math.min(prerate,throughputs[i])/throughputs[i]*100).toFixed(0);
           }
         }
         // Activate the tooltips
         $(function () {
           $('[data-toggle="tooltip"]').tooltip();
         });
+        return(throughputs);
       }
 
 
@@ -320,8 +534,8 @@
           stations_values[i] = parseFloat(rows[i].getElementsByClassName("stations_input")[0].value);
           times_values[i] = parseFloat(rows[i].getElementsByClassName("time_input")[0].value);
         }
-        console.log(stations_values);
-        console.log(times_values);
+        //console.log(stations_values);
+        //console.log(times_values);
       }
 
     </script>
@@ -353,7 +567,6 @@
           associatedInput.disabled = true;
         }
         writeOutputTable(stations_values, changes_values, times_values, includeChanges);
-        console.log(includeChanges)
       }
       
       // function to update the values of the changes
@@ -362,9 +575,48 @@
         for(i=0;i<changeEntries.length;i++) {
           changes_values[i] = parseFloat(changeEntries[i].value);
         }
-        console.log(changes_values);
+
       }
 
+    </script>
+
+    <script type="text/javascript">
+      function setupSelection(selector){
+        var choice = selector.options[selector.selectedIndex].value;
+        if(choice == "noScanners"){
+          document.getElementById("poststats_3").style.display = ("none");
+          document.getElementById("preinput_3").style.display = ("none");
+          document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = Infinity;
+          document.getElementById("poststats_0").style.display = ("none");
+          document.getElementById("preinput_0").style.display = ("none");
+          document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = Infinity;
+        } 
+        if(choice == "withHealth"){
+          document.getElementById("poststats_3").style.display = ("table-row");
+          document.getElementById("preinput_3").style.display = ("table-row");
+          if(document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value == Infinity){
+            document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = 2;
+          }
+          document.getElementById("poststats_0").style.display = ("table-row");
+          document.getElementById("preinput_0").style.display = ("table-row");
+          if(document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value == Infinity){
+            document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = 2;
+          }
+        }
+        if(choice == "default"){
+          document.getElementById("poststats_3").style.display = ("table-row");
+          document.getElementById("preinput_3").style.display = ("table-row");
+          if(document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value == Infinity){
+            document.getElementById("preinput_3").getElementsByClassName("stations_input")[0].value = 2;
+          }
+          document.getElementById("poststats_0").style.display = ("none");
+          document.getElementById("preinput_0").style.display = ("none");
+          document.getElementById("preinput_0").getElementsByClassName("stations_input")[0].value = Infinity;
+        }
+        updateInputs();
+        updateThroughput();
+        writeOutputTable(stations_values, changes_values, times_values, includeChanges);
+      }
     </script>
 
     <script type="text/javascript">
@@ -388,7 +640,13 @@
         item.addEventListener('blur', updateChanges);
         item.addEventListener('blur', function(){writeOutputTable(stations_values, changes_values, times_values, includeChanges)},false);
       }
+
+
+      // add listeners for setup selections
+      document.getElementById("setupselect").addEventListener('change', function(){setupSelection(document.getElementById("setupselect"))},false);
     </script>
+
+
 
     <!--Tooltip Activation-->
     <script type="text/javascript">
@@ -398,5 +656,6 @@
     </script>
 
 
-  </body>
+
+</body>
 </html>
