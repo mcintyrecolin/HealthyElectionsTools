@@ -101,7 +101,7 @@
                 <td>Task</td>
                 <td>Number of Stations</td>
                 <td>Average Time to Complete Task (min)</td>
-                <td>Throughput (voters/hr)</td>    
+                <td>Capacity (voters/hr)</td>    
                 <td>Utilization (%)</td>               
               </tr>
             </thead>
@@ -205,8 +205,6 @@
   </div><!--Row-->
   <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
   <div class="row">
-
-      <!--<div class="col-sm-12 col-12 col-md-1"></div>-->
     <div class="col-sm-10 col-10 col-md-10">
       <h2 align="left" class="section-title-noline">Model Assumptions</h2>
       <p> This tool uses queueing theory to model the dissapation of a line given its downstream steps. This model is most easily thought of as studying the system in the early morning, immediately after opening the polls.  We assume that there is an empty system (i.e. nobody in the polling place) and a built up line (i.e. some number of people waiting outside) prior to opening the system, at which point the line is worked down at the average processing rate, and voters continue to arrive at the average arrival rate.</p>

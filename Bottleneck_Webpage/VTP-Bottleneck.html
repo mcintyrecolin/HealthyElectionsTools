@@ -105,7 +105,7 @@
                 <td>Task</td>
                 <td>Number of Stations</td>
                 <td>Average Time to Complete Task (min)</td>
-                <td>Throughput (voters/hr)</td>    
+                <td>Capacity (voters/hr)</td>    
                 <td>Utilization (%)</td>               
               </tr>
             </thead>
@@ -213,7 +213,7 @@
               <td>Task</td>
               <td>Number of Stations</td>
               <td>Average Time to Complete Task (min)</td>
-              <td>Throughput (voters/hr)</td>   
+              <td>Capacity (voters/hr)</td>   
               <td>Utilization (%)</td>        
             </tr>
           </thead>
@@ -261,6 +261,28 @@
       </div><!--Card-->
     </div><!--Col-->
   </div><!--Row-->
+  <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
+  <div class="row">
+    <div class="col-sm-10 col-10 col-md-10">
+      <h2 align="left" class="section-title-noline">Model Assumptions</h2>
+      <p> This tool uses makes calculations to determine the bottleneck, throughput capacity, and utilization of a multi-step voting process. </p>
+      <p> The tool allows for the selection of different COVID-19 protocols and will calculate the impact on service stations, service times, capacities, and the bottlenecks of the process after accounting for these new protocols. These outputs are estimates based on the original data entered and the selection and parameters associated with each of the COVID-19 measures</p>
+      <p>The four parameters are detailed here: 
+      	<ul>
+      		<li><b>Fewer Voting Booths:</b> Number of service stations in the voting process reduced by the fraction entered</li>
+      		<li><b>Cleaning Booths:</b> The service time of voting is increased as if an additional person were sent through to clean the booth every few voters. This cleaning is assumed to take as long as voting</li>
+      		<li><b>Longer Check In Time:</b> This increases the check in time by a certain number of minutes. We assume that times will increase due to additional necessary safety steps</li>
+      		<li><b>Increase in Absentee:</b> This reduces the voter arrival rate by some percentage, impacting the future voter arrival rate and the utilization of the future system.</li>
+      	</ul></p>
+      <p>Calculation Descriptions:</p>
+      	<ul>
+      		<li><b>Capacity:</b> The maximum capacity of this step in the voting process. The minimum capacity is flagged with an exclamation point</li>
+      		<li><b>Utilization:</b> The expected utilization of this step given that the process as a whole will have a voter throughput equal to the minimum of the voter arrival rate and the bottleneck capacity.</li>
+      	</ul>
+
+      <h4 style="color:#122336">Developers: Stephen Graves and Colin McIntyre</h4>
+    </div><!-- Col -->
+  </div><!-- Row -->
 
 
   <!--
