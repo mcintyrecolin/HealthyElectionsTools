@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="250mm"
+   height="180mm"
+   viewBox="0 0 250 180"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="SurgeGraph.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)">
+  <defs
+     id="defs2">
+    <clipPath
+       id="clipPath869"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path867"
+         d="M 0,0 H 683 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath881"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path879"
+         d="M 0,1 H 682 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath893"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path891"
+         d="M 43,44 H 670 V 445 H 43 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath903"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path901"
+         d="M 43,44 H 670 V 445 H 43 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath915"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path913"
+         d="M 0,1 H 682 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath929"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path927"
+         d="M 0,1 H 682 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath943"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path941"
+         d="M 0,1 H 682 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath957"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path955"
+         d="M 0,0 H 683 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath969"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path967"
+         d="m 0,115.3798 h 683 v 26.35662 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath983"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path981"
+         d="M 0,0 H 683 V 496 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1102"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1100"
+         d="M 0,0 H 683 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1114"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1112"
+         d="M 0,0 H 682 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1126"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1124"
+         d="M 43,43 H 670 V 444 H 43 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1136"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1134"
+         d="M 43,43 H 670 V 444 H 43 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1148"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1146"
+         d="M 0,0 H 682 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1162"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1160"
+         d="M 0,0 H 682 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1176"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1174"
+         d="M 0,0 H 682 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1190"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1188"
+         d="m 0,114.3798 h 683 v 26.35662 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1204"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1202"
+         d="M 0,0 H 683 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       id="clipPath1218"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path1216"
+         d="M 0,0 H 683 V 495 H 0 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1204-3">
+      <path
+         d="M 0,0 H 683 V 495 H 0 Z"
+         id="path1202-5" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.62722117"
+     inkscape:cx="616.36573"
+     inkscape:cy="296.71111"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1092"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1252"
+     inkscape:window-height="782"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.35277777,0,0,-0.35277777,3.2632001,177.54775)"
+       inkscape:label="Surge"
+       id="g1092">
+      <g
+         id="g1094" />
+      <g
+         id="g1096"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           clip-path="url(#clipPath1102)"
+           id="g1098">
+          <path
+             id="path1104"
+             style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none"
+             d="M 0,495 H 683 V 0 H 0 Z" />
+          <path
+             id="path1106"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="M 0,495 H 683 V -7.304043e-6 H 0 Z" />
+        </g>
+      </g>
+      <g
+         id="g1108"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           clip-path="url(#clipPath1114)"
+           id="g1110">
+          <g
+             transform="matrix(7.874016e-5,0,0,-7.874016e-5,43.5,443.5)"
+             id="g1116">
+            <path
+               id="path1118"
+               style="fill:none;stroke:#d9d9d9;stroke-width:12700;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="M 0,5080000 H 7950200 M 0,4445000 H 7950200 M 0,3810000 H 7950200 M 0,3175000 H 7950200 M 0,2540000 H 7950200 M 0,1905000 H 7950200 M 0,1270000 H 7950200 M 0,635000 H 7950200 M 0,0 h 7950200" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g1120"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           clip-path="url(#clipPath1126)"
+           id="g1122">
+          <path
+             id="path1128"
+             style="fill:#ff0000;fill-opacity:0.1686;fill-rule:nonzero;stroke:none"
+             d="m 44,343 h 1 l 1,4 1,6 1,10 1,10 1,4 1,3 1,-3 1,3 1,3 v 4 l 1,3 1,-3 1,3 1,3 1,4 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 v -3 l 1,3 1,3 1,4 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 v 3 l 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,4 1,3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 v 4 l 1,3 1,3 1,-3 1,-4 1,-3 1,3 1,4 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,-3 v 3 l 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 v 3 l 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,4 1,3 1,3 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,3 v -3 l 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,3 1,4 1,-4 1,-3 1,3 1,4 1,3 1,-3 v -3 l 1,-4 1,4 1,3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,4 1,3 1,3 1,-3 1,-3 1,-4 1,4 1,3 v 3 l 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 v 3 l 1,4 1,3 1,3 1,-3 1,3 1,3 1,4 1,-3 1,-4 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,3 v -3 l 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,3 1,3 1,4 v -4 l 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 v -3 l 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,3 1,4 1,3 1,3 1,4 1,-3 1,-4 1,-3 v -3 l 1,-4 1,4 1,3 1,3 1,-3 1,3 1,3 1,4 1,-3 1,-4 1,-3 1,-4 1,-3 1,-3 1,3 1,-3 1,-3 1,-3 v 3 l 1,3 1,3 1,-3 1,3 1,4 1,3 1,3 1,-3 1,-4 1,-10 1,-3 1,3 1,4 1,3 1,-3 1,3 1,-3 1,3 1,3 v 4 l 1,-4 1,-9 1,-4 1,-3 1,3 1,-3 1,-3 1,-3 1,-4 1,-3 1,-3 1,-4 1,3 1,-3 1,3 1,-3 1,3 1,-3 v 3 l 1,-3 1,-3 1,-3 1,3 1,3 1,3 1,4 1,3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,3 1,10 1,4 1,-4 v -3 l 1,-3 1,-3 1,-4 1,4 1,3 1,3 1,-3 1,-4 1,-9 1,-4 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,-3 v 3 l 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,3 1,4 1,-4 1,-3 1,-3 1,3 1,-3 v -3 l 1,-4 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,4 1,3 1,-4 1,-3 1,-3 1,3 v -3 l 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,-3 1,-3 1,-4 1,4 v 3 l 1,-3 1,-4 1,4 1,3 1,-3 1,-4 1,-3 1,3 1,4 1,3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,-3 1,-3 v -4 l 1,-3 1,3 1,-3 1,3 1,4 1,3 1,-3 1,-4 1,4 1,3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 1,3 v -3 l 1,-4 1,-3 1,3 1,4 1,3 1,-3 1,3 1,3 1,4 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,-3 1,-4 v -3 l 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,3 1,4 1,-4 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-3 1,3 v 3 l 1,-3 1,-4 1,-3 1,3 1,-3 1,4 1,-3 1,-4 1,-3 1,3 1,3 1,-3 1,-4 1,-3 1,3 1,-3 1,-3 1,-3 v 3 l 1,3 1,-3 1,-4 1,4 1,3 1,4 1,3 1,3 1,-3 1,-10 1,-3 1,3 1,3 1,-3 1,-3 1,-4 1,-3 1,-10 v -3 l 1,3 1,10 1,3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,4 1,3 1,-4 1,-9 1,-4 1,4 1,3 1,3 1,-3 1,3 v -3 l 1,3 1,4 1,9 1,4 1,-4 1,-3 1,-3 1,-3 1,-4 1,-3 1,-4 1,-9 1,-4 1,-3 1,3 1,-3 1,3 1,-3 v -4 l 1,-3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,3 1,4 1,-4 1,-3 1,-3 1,-4 1,-3 1,-3 1,-4 v -3 l 1,-3 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-4 1,-3 1,3 1,4 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 v 3 l 1,-3 1,-3 1,-3 1,-4 1,3 1,-3 1,3 1,-3 1,3 1,-3 1,-3 1,-4 1,-3 1,3 1,-3 1,3 1,-3 1,3 v 4 l 1,3 1,3 1,-3 1,3 1,-3 1,3 1,4 1,3 1,-4 1,-10 1,-10 1,-3 1,-3 1,-4 1,-9.00001 1,-4 1,-3 1,3 v 4 l 1,3 1,-3 1,-4 1,-3 1,-3 1,-10 1,-6 1,-4 1,1 1,-1 1,1 1,-1 1,1 1,-1 1,1 1,-1 h 1 1 v -1 0 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 v 0 h -1 -1 -1 -1 -1 -1 -1 -1 l -1,4 -1,6 -1,10 -1,4 -1,3 -1,-3 -1,3 -1,-4 -1,4 -1,3 V 83 l -1,3 -1,4 -1,-3 -1,3 -1,-3 -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,-3 -1,3 -1,-3 -1,3 -1,3 -1,4 v 3 l -1,-3 -1,-4 -1,-3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,-3 -1,3 -1,-3 -1,3 -1,-3 -1,3 v -3 l -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,-3 -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 v -3 l -1,3 -1,3 -1,3 -1,4 -1,-3 -1,3 -1,3 -1,10 -1,3 -1,4 -1,3 -1,4 -1,3 -1,-3 -1,3 -1,3 -1,4 -1,3 -1,3 v 4 l -1,3 -1,-3 -1,3 -1,-3 -1,3 -1,3 -1,4 -1,3 -1,3 -1,4 -1,3 -1,-3 -1,3 -1,3 -1,4 -1,3 -1,3 -1,10 v 4 l -1,3 -1,3 -1,4 -1,3 -1,3 -1,10 -1,10 -1,7 -1,3 z" />
+        </g>
+      </g>
+      <g
+         id="g1130"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           clip-path="url(#clipPath1136)"
+           id="g1132">
+          <g
+             transform="matrix(7.874016e-5,0,0,-7.874016e-5,44,343)"
+             id="g1138">
+            <path
+               id="path1140"
+               style="fill:none;stroke:#ff0000;stroke-width:25400;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 0,0 h 12700 l 12700,38100 h 12700 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 v 50800 l 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 v 38100 l 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 v 38100 l 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 h 12700 l 12700,50800 12700,38100 h 12700 l 12700,38100 12700,-38100 12700,38100 v -38100 l 12700,38100 h 12700 l 12700,50800 12700,-50800 h 12700 l 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 v 38100 l 12700,-38100 12700,38100 h 12700 l 12700,50800 12700,38100 h 12700 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 v -38100 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 v 50800 l 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 v -38100 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 h 12700 l 12700,50800 12700,38100 h 12700 12700 l 12700,-38100 v 38100 h 12700 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 v 0 l 12700,50800 12700,38100 h 12700 l 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 v -38100 l 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 h 12700 l 12700,50800 12700,-50800 h 12700 l 12700,50800 12700,38100 v 38100 l 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 v 50800 l 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 v -38100 l 12700,38100 12700,50800 12700,38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,50800 12700,38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,-38100 12700,38100 12700,50800 12700,127000 v 76200" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g1184"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           clip-path="url(#clipPath1190)"
+           id="g1186">
+          <g
+             transform="translate(281.6186,120.1364)"
+             id="g1192">
+            <text
+               id="text1196"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans Bold';writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="scale(1,-1)"><tspan
+                 id="tspan1194"
+                 sodipodi:role="line"
+                 style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans Bold'"
+                 x="0"
+                 y="0">Average Line Behavior</tspan></text>
+          </g>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+         x="329.51202"
+         y="-19.470316"
+         id="text1313"
+         transform="scale(1,-1)"><tspan
+           sodipodi:role="line"
+           id="tspan1311"
+           x="329.51202"
+           y="-19.470316"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.75">Time</tspan></text>
+      <text
+         id="text1313-1"
+         y="32.223942"
+         x="149.34747"
+         style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+         xml:space="preserve"
+         transform="matrix(0,1,1,0,0,0)"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.75"
+           y="32.223942"
+           x="149.34747"
+           id="tspan1311-8"
+           sodipodi:role="line">Line Length</tspan></text>
+      <g
+         id="g1198-8"
+         transform="translate(-4.5902721,0.91805434)">
+        <g
+           id="g1200-1"
+           clip-path="url(#clipPath1204-3)">
+          <g
+             id="g1206-6"
+             transform="translate(391.0449,315.3613)">
+            <text
+               transform="scale(1,-1)"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18px;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans Bold';writing-mode:lr-tb;fill:#ff7274;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text1210-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan1208-8"
+                 x="0"
+                 y="0"
+                 style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Untitled Sans';-inkscape-font-specification:'Untitled Sans Bold'">95% Confidence Interval</tspan></text>
+          </g>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:14px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+         x="88.698166"
+         y="-361.90463"
+         id="text1386"
+         transform="scale(1,-1)"><tspan
+           sodipodi:role="line"
+           id="tspan1384"
+           x="88.698166"
+           y="-361.90463"
+           style="font-size:14px;text-align:center;text-anchor:middle;stroke-width:0.75">Beginning </tspan><tspan
+           sodipodi:role="line"
+           x="88.698166"
+           y="-344.40463"
+           style="font-size:14px;text-align:center;text-anchor:middle;stroke-width:0.75"
+           id="tspan1388">Line Length</tspan></text>
+    </g>
+  </g>
+</svg>

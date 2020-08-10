@@ -62,20 +62,14 @@
           <li>Determine when the morning surge will dissipate</li>
           <li>Determine how long lines will get during the surge</li>
         </ul>
+        <hr>
+
       </div>
+      
       <div class ="col-6 col-lg-6 text-center">
-        <h3 align="left">Input Data Description</h3>
-        <h4 align="left">Polling Place Characteristics</h4>
-        <ol align="left">
-            <li><b>System Setup:</b> Use the dropdown to change the polling place setup</li>
-            <li><b>Number of stations:</b> The number of voters who can be served simultaneously at each step in the process</li>
-            <li><b>Average Times:</b> The average time each voter spends at each station </li>
-        </ol>
-        <h4 align="left">Voter Behavior Characteristics</h4>
-        <ol align="left">
-            <li><b>Arrival Rate:</b> The average rate (voters/hour) that arrive at the polling place <b>after</b> the polls open</li>
-            <li><b>Line Length at Start of Voting:</b> The length of the line prior to polls opening</li>
-        </ol>
+        <h3>Surge Dissipation Visualization</h3>
+        <img src="./HE-SurgeTool_files/SurgeGraph.svg" class="img-fluid" alt="Responsive image" width="75%" >
+
       </div>
 
     </div>
@@ -177,7 +171,7 @@
         <div class="container">
           <br>
           <h3>Surge Dynamics</h3>
-          The output shows how long you can expect it to take for the line to return to zero. It also shows how likely it is that the line will grow to <b>at least</b> a certain length before it diminishes to zero.
+          The output shows how long you can expect it to take for the line to return to zero. It also shows how likely it is that the line will grow to <b>at most</b> a certain length before it diminishes to zero.
           <table id = "surgetable" class = "table table-bordered table-striped table-sm">
           	<thead>
           		<tr>
@@ -193,17 +187,17 @@
           			<td id = "surge_duration_2016" class = "align-middle"></td>
           		</tr>
           		<tr>
-          			<td data-toggle="tooltip" data-placement = "top" title="There is a 50% chance the line will be at least this long during the surge.">50% Chance</td>
+          			<td data-toggle="tooltip" data-placement = "top" title="There is a 50% chance there will be a maximum of this many voters or fewer.">50% Chance</td>
           			<td>Voters</td>
           			<td id = "50percent_length_2016" class = "align-middle"></td>
           		</tr>
           		<tr>
-          			<td data-toggle="tooltip" data-placement = "top" title="There is a 25% chance the line will be at least this long during the surge.">25% Chance</td>
+          			<td data-toggle="tooltip" data-placement = "top" title="There is a 75% chance there will be a maximum of this many voters or fewer.">75% Chance</td>
           			<td>Voters</td>
           			<td id = "25percent_length_2016" class = "align-middle"></td>
           		</tr>
           		<tr>
-          			<td data-toggle="tooltip" data-placement = "top" title="There is a 5% chance the line will be at least this long during the surge.">5% Chance</td>
+          			<td data-toggle="tooltip" data-placement = "top" title="There is a 95% chance there will be a maximum of this many voters or fewer.">95% Chance</td>
           			<td>Voters</td>
           			<td id = "5percent_length_2016" class = "align-middle"></td>
           		</tr>
@@ -213,9 +207,22 @@
       </div><!--Card-->
     </div><!--Col-->
   </div><!--Row-->
-  <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
-  <div class="row">
+  <div class="row" style="padding-top: 5px">
+      <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
     <div class="col-sm-10 col-10 col-md-10">
+              <h3 align="left">Input Data Description</h3>
+        <h4 align="left">Polling Place Characteristics</h4>
+        <ol align="left">
+            <li><b>System Setup:</b> Use the dropdown to change the polling place setup</li>
+            <li><b>Number of stations:</b> The number of voters who can be served simultaneously at each step in the process</li>
+            <li><b>Average Times:</b> The average time each voter spends at each station </li>
+        </ol>
+        <h4 align="left">Voter Behavior Characteristics</h4>
+        <ol align="left">
+            <li><b>Arrival Rate:</b> The average rate (voters/hour) that arrive at the polling place <b>after</b> the polls open</li>
+            <li><b>Line Length at Start of Voting:</b> The length of the line prior to polls opening</li>
+        </ol>
+        <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
       <h2 align="left" class="section-title-noline">Model Assumptions</h2>
       <p> This tool uses queueing theory to model the dissapation of a line given its downstream steps. This model is most easily thought of as studying the system in the early morning, immediately after opening the polls.  We assume that there is an empty system (i.e. nobody in the polling place) and a built up line (i.e. some number of people waiting outside) prior to opening the system, at which point the line is worked down at the average processing rate, and voters continue to arrive at the average arrival rate.</p>
       <p> The tool relies on a classic queuing model, known as an “M/M/k system.” For this model of a polling site, we assume that voters arrive randomly with a constant arrival rate, and join a single queue that is being served by a set of parallel stations or servers. In a polling site, we assume that we are modeling the bottleneck step in the process; this might be the check in stations, or the voting stations, or possibly the ballot scanning station or a health check.</p>
@@ -226,11 +233,11 @@
     </div><!-- Col -->
   </div><!-- Row -->
   <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
-  <div class="row">
+  <div class="row" style="padding-top: 5px">
     <h2>Video Tutorial</h2>
     <div class="col-1"></div>
     <div class="col-11">
-    <iframe width="100%" class = "myIframe" src="https://www.youtube.com/embed/8OofFGQP0sI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" class = "myIframe" src="https://www.youtube.com/embed/lgdVpZBngpU" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -375,9 +382,9 @@
             document.getElementById('5percent_length_2016').innerHTML = "Line dissipates immediately";
           } else if(prerate < bottle_stations * (60/bottle_time)){
             var percentages = calcPercentages(numEntries=2000, percentages=[0.5,0.25,0.05], initial_line = prelength, bottle_stations, bottle_time, arrival_rate = prerate);
-            document.getElementById('50percent_length_2016').innerHTML = percentages[0]+" or longer";
-            document.getElementById('25percent_length_2016').innerHTML = percentages[1]+" or longer";
-            document.getElementById('5percent_length_2016').innerHTML = percentages[2]+" or longer";
+            document.getElementById('50percent_length_2016').innerHTML = percentages[0]+" or fewer";
+            document.getElementById('25percent_length_2016').innerHTML = percentages[1]+" or fewer";
+            document.getElementById('5percent_length_2016').innerHTML = percentages[2]+" or fewer";
           } else {
             document.getElementById('50percent_length_2016').innerHTML = "System is Unstable";
             document.getElementById('25percent_length_2016').innerHTML = "System is Unstable";
