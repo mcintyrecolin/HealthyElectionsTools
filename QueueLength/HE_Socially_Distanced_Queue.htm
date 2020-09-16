@@ -74,7 +74,7 @@
 </head>
 <body class="lang-en queuelength-tool">
 <div class="alert alert-light alert-dismissible fade show" role="alert" style="position: fixed; width: 40%; z-index:9999; margin-left:30%">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1xWpI_ML7nu7UYpZiO6jC3yVRoX-dJ34qQZ9LZmT8WPnMIw/viewform?usp=pp_url&entry.439998991=Socially+Distanced+Queue+Tool">Please click here to give feedback and help us improve.</a> 
+  <div>Help us improve this tool by filling out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1xWpI_ML7nu7UYpZiO6jC3yVRoX-dJ34qQZ9LZmT8WPnMIw/viewform?usp=pp_url&entry.439998991=Socially+Distanced+Queue+Tool">short survey</a>.</div>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -124,11 +124,11 @@
         </ul>
         <br>
         <button class = "btn btn-primary btn-xs" onClick="document.getElementById('instructions').scrollIntoView();">
-    		Detailed Instructions and Tutorials
-    	</button>
-    	<br>
-    	<br>
-    	<a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
+          Detailed Instructions and Tutorials
+        </button>
+        <br>
+        <br>
+        <a href="/tools" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
       </div>
       <div class ="col-12 col-sm-8 text-center">
         <h3 class="image-title">Example Maximum Queue Size Calculation</h3>
@@ -245,12 +245,9 @@
   </div><!-- End Row div -->
   <hr style="height:1px; border:none; color:#000; background-color:#000; width: 100%;">
   <br><br>
-
-  <div class="row">
-
-    <!--<div class="col-sm-12 col-12 col-md-1"></div>-->
+  <div class="row top-border">
     <div class="col-sm-10 col-10 col-md-10">
-      <br>
+
       <h2 align="left" class="section-title-noline">Model Assumptions</h2>
       <p> This tool uses queueing theory to model a single process step at a polling site for which there are limits on the number of voters that may be present at any one time.
       <p> The tool relies on a classic queuing model, known as an “M/M/k system.” For this model of a polling site, we assume that voters arrive randomly with a constant arrival rate, and join a single queue that is being served by a set of parallel stations or servers. In a polling site, we assume that we are modeling the bottleneck step in the process; this might be the check in stations, or the voting stations, or possibly the ballot scanning station.
@@ -266,56 +263,55 @@
         <button id="download" class="btn btn-large btn-primary">Download Excel Macro</button>
       </form>
       <br>
-      <a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a><br><br>
+      <a href="/tools" class="btn btn-large btn-clear">Close Calculator and return to main page</a><br><br>
       <!--<a href="http://web.mit.edu/vtp/calc1.html#videos" button="" class="btn btn-large btn-warning smoothScroll">View Instructional Videos</a><br><br>-->
     </div> <!--Column Div  -->
   </div><!--Row Div  -->
-  <div class="row">
-  	<div class="col-sm-11 col-11 col-md-11" id="instructions">
-  		<br>
-      	<h2 align="left" class="section-title-noline">Detailed Directions and Tutorials</h2>
-	    <h3>When to use this tool:</h3>
-	    <p>This tool is designed for election officials hoping to understand line lengths and wait times with simple social distancing measures in place. This tool is meant to answer questions like: </p>
-	    <ul>
-	    	<li>How many people can wait in line inside the polling place?</li>
-	    	<li>How many people will be expected to wait outside the polling place, and how large of a secondary room will be needed for additional waiting?</li>
-	    	<li>How long will voters be expected to wait in total? Inside the main polling place? Outside? </li>
-	    	<li>How many voters will wait too long?</li>
-	    </ul>
-	    <h3>Where to use this tool:</h3>
-	    <p>This tool comes in an online form and an excel-based form. We recommend using the online tool to try a few different polling place setups, understand what the tool outputs represent, and what inputs impact the results most. Once comfortable with these dynamics, the excel-based tool (downloadable online) is best for running tens or hundreds of scenarios, saving results, and seeing more detailed outputs.</p>
-	    <h3>How to use this tool:</h3>
-	    Use a combination of previous election data and new estimates to determine the following inputs:
-	    <ul>
-	    	<li>Room Capacity: How many people can be in the polling place room safely under reasonable social distancing measures? The CDC recommends 6 feet of space between people. Consider the area of the room divided by 36 sq ft. as an absolute maximum number of people, and reduce the capacity from there given areas will be used for supplies, tables, equipment, walking lanes, and dead space must be used to make the voting process more understandable and efficient</li>
-	    	<li>Non-Voters in Room: Some of this capacity will be taken up by election workers, supervisors, security, observers, etc. Count all of them, and the difference between the room capacity and non-voters will be the number of voters allowed in the room</li>
-	    	<li>Voter Processing Points: Of the voters allowed inside by the room capacity, we recommend counting all distinct points in the voting process a voter could be (number of check-in stations, plus number of voting booths, plus any other process steps). We use this number and assume that a voter is always at each of these points to make a conservative estimate of the number of voters allowed to wait inside</li>
-	    	<li>Inside Queue Capacity: The tool will use the inputs and conservative assumptions above to calculate the number of voters allowed to wait inside (Capacity = Room Capacity - Non voters in room - Voter Processing Points)</li>
-	    	<li>Bottleneck Determination: One step in the voting process is always the bottleneck, or the step that can move voters through the slowest. This is very often the check-in process, but could possibly be the voting booth or scanner. To calculate the throughput of each step divide, the number of stations at that step by the average time that step takes for one voter. As a simple example, if there are 4 check-in stations and check in takes two minutes, 4 stations divided by 2 minutes gives 2 voters per minute. We can multiply by 60 to say that the throughput of the check-in step is 120 voters per hour. Perform this calculation for each step in the voting process (e.g. check in, ballot marking, and scanning) and the step with the lowest throughput is your bottleneck.</li>
-	    	<li>Bottleneck Statistics: Once the bottleneck has been determined, input the number of stations and average time spent at that station (like 4 check-in stations and 2 minutes per check-in). The bottleneck statistics will determine the line characteristics. We assume voters will flow through the other steps without significant additional waiting.
-	    		<ul>
-	    			<li>Note: The Healthy Elections project recommends a conservative estimate of these numbers (low number of stations and a long average time) in order to plan for cases where, for example, poll workers do not show up and reduce the number of stations, or voters and workers are unfamiliar with new social-distancing processes and take significantly more time to move through</li>
-	    		</ul>
-	    	</li>
-	    	<li>Voter Arrival Rate: The number of voters who arrive per hour during the busiest time of day. This time will likely be the beginning of the day, but use the peak arrival rate over the busiest time for each polling place.</li>
-	    	<li>Target Wait Time: The tool can report a fraction of people who wait longer than a set target. Use this input to set that target. By default it is 30 minutes.</li>
-	    </ul>
-  	</div>
-  	<div class="row">
-  		<h2>Video Tutorials</h2>
-  		<div class="col-1"></div>
-  		<div class="col-11">
-  			<br>
-  			<h3>The Web-Based tool</h3>
-  			<iframe width="100%" class = "myIframe" src="https://www.youtube.com/embed/lEKB5dv0Q24" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  			<br><br><br>
-  			<h3>The Excel-Based tool</h3>
-  			<iframe width="100%" class = "myIframe"src="https://www.youtube.com/embed/FsgKjr0pjEQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  			<br>
-  		<br>
-  		<a href="http://web.mit.edu/vtp/feedback.html" button="" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
-  		</div>
-  	</div>
+  <div class="row top-border">
+    <div class="col-sm-11 col-11 col-md-11" id="instructions">
+      <h2 align="left" class="section-title-noline">Detailed Directions and Tutorials</h2>
+      <h3>When to use this tool:</h3>
+      <p>This tool is designed for election officials hoping to understand line lengths and wait times with simple social distancing measures in place. This tool is meant to answer questions like: </p>
+      <ul>
+        <li>How many people can wait in line inside the polling place?</li>
+        <li>How many people will be expected to wait outside the polling place, and how large of a secondary room will be needed for additional waiting?</li>
+        <li>How long will voters be expected to wait in total? Inside the main polling place? Outside? </li>
+        <li>How many voters will wait too long?</li>
+      </ul>
+      <h3>Where to use this tool:</h3>
+      <p>This tool comes in an online form and an excel-based form. We recommend using the online tool to try a few different polling place setups, understand what the tool outputs represent, and what inputs impact the results most. Once comfortable with these dynamics, the excel-based tool (downloadable online) is best for running tens or hundreds of scenarios, saving results, and seeing more detailed outputs.</p>
+      <h3>How to use this tool:</h3>
+      Use a combination of previous election data and new estimates to determine the following inputs:
+      <ul>
+        <li>Room Capacity: How many people can be in the polling place room safely under reasonable social distancing measures? The CDC recommends 6 feet of space between people. Consider the area of the room divided by 36 sq ft. as an absolute maximum number of people, and reduce the capacity from there given areas will be used for supplies, tables, equipment, walking lanes, and dead space must be used to make the voting process more understandable and efficient</li>
+        <li>Non-Voters in Room: Some of this capacity will be taken up by election workers, supervisors, security, observers, etc. Count all of them, and the difference between the room capacity and non-voters will be the number of voters allowed in the room</li>
+        <li>Voter Processing Points: Of the voters allowed inside by the room capacity, we recommend counting all distinct points in the voting process a voter could be (number of check-in stations, plus number of voting booths, plus any other process steps). We use this number and assume that a voter is always at each of these points to make a conservative estimate of the number of voters allowed to wait inside</li>
+        <li>Inside Queue Capacity: The tool will use the inputs and conservative assumptions above to calculate the number of voters allowed to wait inside (Capacity = Room Capacity - Non voters in room - Voter Processing Points)</li>
+        <li>Bottleneck Determination: One step in the voting process is always the bottleneck, or the step that can move voters through the slowest. This is very often the check-in process, but could possibly be the voting booth or scanner. To calculate the throughput of each step divide, the number of stations at that step by the average time that step takes for one voter. As a simple example, if there are 4 check-in stations and check in takes two minutes, 4 stations divided by 2 minutes gives 2 voters per minute. We can multiply by 60 to say that the throughput of the check-in step is 120 voters per hour. Perform this calculation for each step in the voting process (e.g. check in, ballot marking, and scanning) and the step with the lowest throughput is your bottleneck.</li>
+        <li>Bottleneck Statistics: Once the bottleneck has been determined, input the number of stations and average time spent at that station (like 4 check-in stations and 2 minutes per check-in). The bottleneck statistics will determine the line characteristics. We assume voters will flow through the other steps without significant additional waiting.
+          <ul>
+            <li>Note: The Healthy Elections project recommends a conservative estimate of these numbers (low number of stations and a long average time) in order to plan for cases where, for example, poll workers do not show up and reduce the number of stations, or voters and workers are unfamiliar with new social-distancing processes and take significantly more time to move through</li>
+          </ul>
+        </li>
+        <li>Voter Arrival Rate: The number of voters who arrive per hour during the busiest time of day. This time will likely be the beginning of the day, but use the peak arrival rate over the busiest time for each polling place.</li>
+        <li>Target Wait Time: The tool can report a fraction of people who wait longer than a set target. Use this input to set that target. By default it is 30 minutes.</li>
+      </ul>
+    </div>
+    <div class="row">
+      <h2>Video Tutorials</h2>
+      <div class="col-1"></div>
+      <div class="col-11">
+        <br>
+        <h3>The Web-Based tool</h3>
+        <iframe width="1140" height="645" src="https://www.youtube.com/embed/PbaPB0zJGe0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br>
+        <h3>The Excel-Based tool</h3>
+        <iframe width="1140" height="645" src="https://www.youtube.com/embed/0f6X4QPiJ0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <br>
+        <a href="/tools" class="btn btn-large btn-clear">Close Calculator and return to main page</a>
+      </div>
+    </div>
 
   </div>
 
@@ -393,19 +389,15 @@
     </div>
   </footer>
   <div class="bottom-bar callout secondary">
-    <div class="row">
-      <div class="large-12 columns">
-        © 2020 The Stanford-MIT Healthy Elections Project All rights reserved.
-      </div>
+    <div class="large-12 columns">
+      © 2020 The Stanford-MIT Healthy Elections Project All rights reserved.
     </div>
   </div>
 </div>
 
-
 <script type="text/javascript">
   $('.alert').alert()
 </script>
-
 
 <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/25","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"1759c2da286d23900fc4bd7bd8c145360897889ca7b98125e8aeceb7bf065648"}}</script>
 <script src="./HE - Election Toolkit_files/Pantheon_files/js_BJeCZ0MbcFqMP0F1gYhkMYSB6z6TwiHfr-Skf3nT_zs.js"></script>
@@ -419,14 +411,14 @@
 <script src="./HE - Election Toolkit_files/tableMaker.js" type="text/javascript"></script>
 <script type="text/javascript" src="./HE - Election Toolkit_files/smoothscroll.js"></script>
 
-<script type="text/javascript" language="javascript"> 
-	$('.myIframe').css('width', $(window).width()*0.6+'px');
-	$('.myIframe').css('height', $(window).width()*0.6*0.56+'px');
+<script type="text/javascript" language="javascript">
+  $('.myIframe').css('width', $(window).width()*0.6+'px');
+  $('.myIframe').css('height', $(window).width()*0.6*0.56+'px');
 
-	function scrollFunction() {
-		document.getElementById('instructions').scrollIntoView();
-		return true;
-	}
+  function scrollFunction() {
+    document.getElementById('instructions').scrollIntoView();
+    return true;
+  }
 </script>
 
 <script>

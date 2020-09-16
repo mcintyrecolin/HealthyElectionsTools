@@ -24,7 +24,7 @@
   src: url("../fonts/triptych/Triptych-Grotesque.eot?#iefix") format("embedded-opentype"), url("../fonts/triptych/Triptych-Grotesque.woff2") format("woff2"), url("../fonts/triptych/Triptych-Grotesque.woff") format("woff"), url("../fonts/triptych/Triptych-Grotesque.ttf") format("truetype"); }
 
 body {
-  background: #f2eeeb;
+  background: #eeeff1;
   font-family: "UntitledSans-Regular", sans-serif; }
 
 h1 {
@@ -73,7 +73,7 @@ tbody tr th {
 tr, td, th {
   font-size: .875rem;
   color: #000000;
-  background: #f2eeeb;
+  background: #eeeff1;
   vertical-align: top;
   font-family: "UntitledSans-Regular", sans-serif; }
 
@@ -147,7 +147,8 @@ header {
   margin-left: 2rem; }
 
 .intro-container {
-  background: white; }
+  background: white;
+  border-bottom: 5px solid #2065cc;}
 .intro-container .intro-content {
   display: flex;
   flex-direction: row;
@@ -164,3 +165,8 @@ header {
   text-decoration: none; }
 .site-title a span {
   white-space: nowrap; }
+.top-border {
+  border-top: 5px solid #2065cc;
+  margin-top: 2rem;
+  padding-top: 4rem;
+}
